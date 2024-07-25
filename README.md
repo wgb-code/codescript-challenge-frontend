@@ -81,3 +81,8 @@ O diretório `app` contém todos os recursos da aplicação, incluindo estilos, 
 #### Pages
 
 - Diretório que organiza cada página da aplicação como módulos, contendo pacotes de HTML, CSS e JavaScript para cada página.
+
+## Meta Tags usadas na aplicação
+Nesta aplicação me baseei somente nas meta tags recomendadas pelo **Google**, para saber mais quais são essas meta tags estarei deixando o link do artigo oficial abaixo:
+
+    https://developers.google.com/search/docs/crawling-indexing/special-tags?hl=pt-br
