@@ -1,3 +1,37 @@
+@import url('colors.css');
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/app/assets/fonts/Inter/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/app/assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/app/assets/fonts/Inter/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/app/assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -6,9 +40,15 @@
 
 * {
   margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
+  background-color: var(--gray-box);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -42,4 +82,12 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
 }

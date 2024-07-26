@@ -1,0 +1,175 @@
+@import url('vendor/reset.css');
+@import url('vendor/colors.css');
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 10rem !important;
+    background-color: var(--off-white);
+    box-shadow: 0 0.2rem 0.8rem hsla(220, 68%, 12%, .1);
+    z-index: 100;
+}
+
+nav>h1 {
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    margin: 0;
+    user-select: none;
+}
+
+nav>h1>span {
+    color: var(--secondary-text);
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    gap: 3.6rem;
+    margin: 0;
+}
+
+nav>ul>li {
+    position: relative;
+}
+
+nav>ul>li .service-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav > ul >li .service-link p,
+section > .menu-mobile > li > .service-link p {
+    margin: 0;
+}
+
+nav>ul .list-service,
+section > .menu-mobile > li > .list-service {
+    display: none;
+}
+
+nav>ul>li a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 0.5rem;
+    color: var(--primary-dark);
+}
+
+nav>ul>li a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-text);
+    height: 0.3rem;
+    width: 0;
+    left: 0;
+    bottom: -0.5rem;
+    transition: 0.2s;
+}
+
+nav>ul>li a:hover::after {
+    width: 100%;
+}
+
+nav>ul>li:hover .list-service {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--off-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
+    z-index: 101;
+    padding: 1rem;
+}
+
+nav > button,
+section > button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+section > .menu-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1400px) {
+    nav > ul {
+        display: none;
+    }
+
+    nav > .open-nav {
+        display: block;
+    }
+
+    nav.opened > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 0.2rem 0.8rem hsla(220, 68%, 12%, .1);
+    }
+
+    .navigation-menu {
+        display: flex;
+        padding: 1rem 10rem 2rem;
+        background-color: var(--off-white);
+        box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
+    }
+
+    section > .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    section > .menu-mobile > li > .service-link {
+        display: flex;
+        align-items: center;
+    }
+
+    section > .menu-mobile > li > a {
+        color: var(--primary-dark);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    section > .menu-mobile > li > a:hover {
+        background-color: var(--secondary-text);
+        color: var(--off-white);
+        transition: 0.2s;
+    }
+
+    section > .menu-mobile > li:hover .list-service {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: var(--off-white);
+        box-shadow: 0 0.2rem 0.8rem hsla(220, 68%, 12%, .1);
+        z-index: 102;
+        padding: 1rem;
+    }
+}
