@@ -5,13 +5,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 10rem !important;
+    padding: 3rem 30rem;
     background-color: var(--off-white);
     box-shadow: 0 0.2rem 0.8rem hsla(220, 68%, 12%, .1);
     z-index: 100;
 }
 
-nav>h1 {
+nav h1 {
     color: var(--primary-dark);
     font-weight: 600;
     font-size: 2.5rem;
@@ -20,100 +20,113 @@ nav>h1 {
     user-select: none;
 }
 
-nav>h1>span {
+nav h1 span {
     color: var(--secondary-text);
 }
 
-nav>ul {
+nav ul {
     display: flex;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5px;
-    gap: 3.6rem;
+    gap: 3rem;
     margin: 0;
 }
 
-nav>ul>li {
+nav ul li {
     position: relative;
 }
 
-nav>ul>li .service-link {
+nav ul li .service-link {
     display: flex;
     align-items: center;
+
     gap: 0.5rem;
 }
 
-nav > ul >li .service-link p,
-section > .menu-mobile > li > .service-link p {
+nav ul li .service-link p,
+.menu-mobile li .service-link p {
     margin: 0;
 }
 
-nav>ul .list-service,
-section > .menu-mobile > li > .list-service {
+nav ul .list-service,
+.menu-mobile li .list-service {
     display: none;
 }
 
-nav>ul>li a {
+nav ul li a {
     display: flex;
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 0 0.5rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
     color: var(--primary-dark);
+    border-radius: 1rem;
 }
 
-nav>ul>li a::after {
-    content: '';
-    position: absolute;
-    background-color: var(--secondary-text);
-    height: 0.3rem;
-    width: 0;
-    left: 0;
-    bottom: -0.5rem;
-    transition: 0.2s;
+nav ul li a:hover {
+    background-color: var(--gray-box);
 }
 
-nav>ul>li a:hover::after {
-    width: 100%;
-}
-
-nav>ul>li:hover .list-service {
+nav ul li .list-service.show {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     justify-content: center;
     position: absolute;
-    top: 100%;
+    top: calc(6.2rem);
     left: 0;
     background-color: var(--off-white);
-    border-radius: 0.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
     z-index: 101;
-    padding: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+    width: 27rem;
+    gap: 1rem;
 }
 
-nav > button,
-section > button {
+nav ul li .list-service li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+nav ul li .list-service li a {
+    display: flex;
+    gap: 1rem;
+}
+
+nav button {
     display: none;
     background-color: transparent;
+    border-radius: 100%;
+    padding: 0.5rem;
     border: none;
     cursor: pointer;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-section > .menu-mobile {
-    display: none;
+nav button:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1400px) {
-    nav > ul {
+@media screen and (max-width: 1800px) {
+    nav {
+        padding: 3rem 30rem;
+    }
+
+    nav ul {
         display: none;
     }
 
-    nav > .open-nav {
+    nav .open-nav {
         display: block;
     }
 
-    nav.opened > ul {
+    nav.opened ul {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -126,41 +139,38 @@ section > .menu-mobile {
     }
 
     .navigation-menu {
-        display: flex;
-        padding: 1rem 10rem 2rem;
+        display: none;
+        padding: 0 30rem 3rem;
         background-color: var(--off-white);
         box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
     }
 
-    section > .menu-mobile {
+    .menu-mobile {
         display: flex;
         flex-direction: column;
         width: 100%;
         font-size: 1.5rem;
-        font-weight: 500;
         letter-spacing: 0.5px;
         gap: 0.5rem;
         padding: 0;
     }
 
-    section > .menu-mobile > li > .service-link {
+    .menu-mobile li .service-link {
         display: flex;
         align-items: center;
     }
 
-    section > .menu-mobile > li > a {
+    .menu-mobile li a {
         color: var(--primary-dark);
         padding: 0.5rem;
-        border-radius: 0.5rem;
+        border-radius: 0.8rem;
     }
 
-    section > .menu-mobile > li > a:hover {
-        background-color: var(--secondary-text);
-        color: var(--off-white);
-        transition: 0.2s;
+    .menu-mobile li a:hover {
+        background-color: var(--gray-box);
     }
 
-    section > .menu-mobile > li:hover .list-service {
+    .menu-mobile li:hover .list-service {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -168,8 +178,45 @@ section > .menu-mobile {
         top: 0;
         left: 0;
         background-color: var(--off-white);
-        box-shadow: 0 0.2rem 0.8rem hsla(220, 68%, 12%, .1);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
         z-index: 102;
         padding: 1rem;
+    }
+
+    .menu-mobile li .list-service li {
+        display: flex;
+    }
+
+    .menu-mobile li .list-service li a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .menu-mobile li .list-service li a:hover {
+        background-color: var(--gray-box);
+        color: var(--primary-dark);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        padding: 3rem 20rem;
+    }
+
+    .navigation-menu {
+        padding: 0 20rem 3rem 20rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    nav {
+        padding: 3rem 3rem;
+    }
+
+    .navigation-menu {
+        padding: 0 3rem 3rem 3rem;
     }
 }
