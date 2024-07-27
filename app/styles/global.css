@@ -40,7 +40,6 @@ nav ul li {
 nav ul li .service-link {
     display: flex;
     align-items: center;
-
     gap: 0.5rem;
 }
 
@@ -113,6 +112,139 @@ nav button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    width: 18rem;
+    height: 25rem;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 2rem;
+    box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s
+}
+
+.carousel .list .item:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(2) {
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(3) {
+    left: calc(67% + 20rem);
+}
+
+.carousel .list .item:nth-child(4) {
+    left: calc(67% + 40rem);
+}
+
+.item .content {
+    position: absolute;
+    top: 40%;
+    left: 20rem;
+    transform: translateY(-50%);
+    width: 50rem;
+    text-align: left;
+    color: var(--primary-dark);
+    display: none;
+}
+
+.list .item:nth-child(1) .content {
+    display: block;
+}
+
+.content .title {
+    font-size: 10rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    opacity: 0;
+    animation: animate 0.5s ease-in-out 0.3s 1 forwards;
+}
+
+.content .desc {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+    opacity: 0;
+    animation: animate 0.5s ease-in-out 0.6s 1 forwards;
+}
+
+
+.content button {
+    opacity: 0;
+    animation: animate 0.5s ease-in-out 0.9s 1 forwards;
+}
+
+.content button {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: 0.1rem solid var(--primary-dark);
+    border-radius: 0.3rem;
+    color: var(--primary-dark);
+}
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 30rem;
+    max-width: 30%;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+.arrows button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--primary-dark);
+    color: var(--off-white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background-color: var(--secondary-text);
+}
+
+.carousel .timeRunning {
+    position: absolute;
+    z-index: 1000;
+    width: 0;
+    height: 0.4rem;
+    background-color: var(--primary-dark);
+    left: 0; top: 0;
+    animation: runningTime 7s linear forwards;
+}
 @media screen and (max-width: 1800px) {
     nav {
         padding: 3rem 30rem;
@@ -199,6 +331,19 @@ nav button:hover {
         background-color: var(--gray-box);
         color: var(--primary-dark);
     }
+
+    .carousel {
+        width: 100%;
+        height: 87vh;
+    }
+
+    .item .content {
+        top: 40%;
+    }
+
+    .arrows {
+        right: 25%;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -209,14 +354,59 @@ nav button:hover {
     .navigation-menu {
         padding: 0 20rem 3rem 20rem;
     }
+
+    .item .content {
+        left: 5%;
+    }
+
+    .content .title {
+        font-size: 6rem;
+    }
+
+    .arrows {
+        top: 80%;
+    }
 }
 
 @media screen and (max-width: 740px) {
     nav {
         padding: 3rem 3rem;
     }
+    .item .content {
+        width: 30rem;   
+    }
 
     .navigation-menu {
         padding: 0 3rem 3rem 3rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .arrows {
+        right: 25rem;
+    }
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 10rem);
+        filter: blur(3.3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes runningTime{
+    from{
+        width: 0%
+    }
+
+    to {
+        width: 100%;
     }
 }
