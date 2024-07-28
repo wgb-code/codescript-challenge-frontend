@@ -121,8 +121,8 @@ nav button:hover {
 
 .carousel .list .item {
     position: absolute;
-    width: 18rem;
-    height: 25rem;
+    width: 12rem;
+    height: 20rem;
     top: 80%;
     transform: translateY(-70%);
     left: 70%;
@@ -144,15 +144,15 @@ nav button:hover {
 }
 
 .carousel .list .item:nth-child(2) {
-    left: 67%;
+    left: 70;
 }
 
 .carousel .list .item:nth-child(3) {
-    left: calc(67% + 20rem);
+    left: calc(70% + 14rem);
 }
 
 .carousel .list .item:nth-child(4) {
-    left: calc(67% + 40rem);
+   left: calc(70% + 28rem);
 }
 
 .item .content {
@@ -160,10 +160,16 @@ nav button:hover {
     top: 40%;
     left: 20rem;
     transform: translateY(-50%);
-    width: 50rem;
+    width: 63rem;
     text-align: left;
     color: var(--primary-dark);
     display: none;
+    background-color: rgba(170, 192, 223, 0.2);
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .list .item:nth-child(1) .content {
@@ -175,7 +181,7 @@ nav button:hover {
     color: var(--primary-dark);
     font-weight: 500;
     line-height: 1;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.2rem;
     opacity: 0;
     animation: animate 0.5s ease-in-out 0.3s 1 forwards;
 }
@@ -187,12 +193,7 @@ nav button:hover {
     margin-left: 0.5rem;
     opacity: 0;
     animation: animate 0.5s ease-in-out 0.6s 1 forwards;
-}
-
-
-.content button {
-    opacity: 0;
-    animation: animate 0.5s ease-in-out 0.9s 1 forwards;
+    color: var(--primary-dark);
 }
 
 .content button {
@@ -204,6 +205,9 @@ nav button:hover {
     border: 0.1rem solid var(--primary-dark);
     border-radius: 0.3rem;
     color: var(--primary-dark);
+    margin-top: 1rem;
+    opacity: 0;
+    animation: animate 0.5s ease-in-out 0.9s 1 forwards;
 }
 
 .arrows {
@@ -372,8 +376,22 @@ nav button:hover {
     nav {
         padding: 3rem 3rem;
     }
+
     .item .content {
         width: 30rem;   
+    }
+
+    .content .title {
+        font-size: 4rem;
+    }
+
+    .content .desc {
+        font-size: 1.6rem;
+    }
+
+    .carousel .list .item {
+        width: 12rem;
+        height: 15rem;
     }
 
     .navigation-menu {
