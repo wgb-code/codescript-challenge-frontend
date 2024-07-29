@@ -1,4 +1,5 @@
 import './carousel.js';
+import { showAndHideLoader } from './preloader.js';
 
 function toggleDropdown(event) {
     event.preventDefault();
@@ -30,3 +31,7 @@ function toggleNavbar() {
 
 window.toggleDropdown = toggleDropdown;
 window.toggleNavbar   = toggleNavbar;
+
+document.addEventListener('DOMContentLoaded', () => {
+    showAndHideLoader();
+});

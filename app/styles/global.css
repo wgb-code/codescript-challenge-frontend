@@ -1,5 +1,6 @@
 @import url('vendor/reset.css');
 @import url('vendor/colors.css');
+@import url('vendor/preloader.css');
 
 nav {
     display: flex;
@@ -247,7 +248,7 @@ nav button:hover {
 
 .carousel .timeRunning {
     position: absolute;
-    z-index: 1000;
+    z-index: 100;
     width: 0;
     height: 0.4rem;
     background-color: var(--primary-dark);
