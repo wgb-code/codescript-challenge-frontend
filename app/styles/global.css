@@ -345,12 +345,13 @@ section .wrapper .item {
     display: flex;
     justify-content: center;
     background-color: var(--primary-dark);
-    padding: 6rem 0;
+    padding: 0 0 6rem 0;
 }
 
 section .best-features-title {
     display: flex;
-    gap: 5rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 section .best-features-title h2 {
@@ -361,18 +362,25 @@ section .best-features-title h2 {
     letter-spacing: -0.1rem;
     user-select: none;
     color: var(--off-white);
+    z-index: 100;
 }
 
-section .best-features-title h2::after {
+section .best-features-title .highlight {
+    position: relative;
+    display: inline-block;
+    color: var(--off-white);
+}
+
+section .best-features-title .highlight::before {
     content: '';
     position: absolute;
-    bottom: -43rem;
-    left: 61.5rem;
-    transform: translateX(-50%);
-    width: 23rem;
-    height: 0.3rem;
-    background-color: yellow;
-    border-radius: 0.15rem;
+    left: 0;
+    right: 0;
+    bottom: 0.1em;
+    height: 0.3em;
+    background: var(--highlighter);
+    pointer-events: none;
+    z-index: -1;
 }
 
 section .best-features-title h2 span {
