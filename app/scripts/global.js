@@ -8,13 +8,28 @@ function toggleDropdown(event) {
     let listService = event.currentTarget.nextElementSibling;
     let isVisible   = listService.classList.contains('show');
 
-    document.querySelectorAll('.list-service').forEach(menu => {
-        menu.classList.remove('show');
-    });
+    document.querySelectorAll('.list-service')
+        .forEach(menu => {
+            menu.classList.remove('show');
+        }
+    );
 
     if (!isVisible) {
         listService.classList.add('show');
     }
+}
+
+function toggleDropdownMobile(event) {
+    
+    event.preventDefault();
+    event.stopPropagation();
+
+    let listService       = event.currentTarget.nextElementSibling;
+    let isDropdownVisible = listService.style.display === 'block';
+
+    listService.style.display = isDropdownVisible ? 'none' : 'block';
+
+    event.currentTarget.setAttribute('aria-expanded', !isDropdownVisible);
 }
 
 function toggleNavbar() {
@@ -30,6 +45,7 @@ function toggleNavbar() {
 }
 
 window.toggleDropdown = toggleDropdown;
+window.toggleDropdownMobile = toggleDropdownMobile
 window.toggleNavbar   = toggleNavbar;
 
 document.addEventListener('DOMContentLoaded', () => {
