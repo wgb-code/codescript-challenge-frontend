@@ -570,6 +570,18 @@ section .container-features .item-features {
     .arrows {
         top: 80%;
     }
+
+    .trust-by {
+        animation: none;
+    }
+
+    section .wrapper {
+        animation: none;
+    }
+
+    .best-features {
+        animation: none;
+    }
 }
 
 @media screen and (max-width: 740px) {
@@ -625,6 +637,8 @@ section .container-features .item-features {
     section .container-features .item-features {
         grid-template-columns: repeat(1, 1fr);
     }
+
+
 }
 
 @keyframes animate {
