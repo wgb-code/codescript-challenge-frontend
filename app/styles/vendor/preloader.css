@@ -1,6 +1,3 @@
-@import url('colors.css');
-@import url('reset.css');
-
 #preloader {
     display: flex;
     justify-content: center;
