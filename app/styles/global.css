@@ -260,6 +260,12 @@ nav button:hover {
     animation: runningTime 7s linear forwards;
 }
 
+.trust-by {
+    animation: scrollReveal linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
 section .trust-title {
     display: flex;
     flex-direction: column;
@@ -307,6 +313,9 @@ section .wrapper {
         rgba(0, 0, 0, 1) 80%,
         rgba(0, 0, 0, 0)
     );
+    animation: scrollReveal linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 section .wrapper .item {
@@ -364,6 +373,9 @@ section .wrapper .item {
     justify-content: center;
     background-color: var(--primary-dark);
     padding: 0 0 6rem 0;
+    animation: scrollReveal linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 .best-features .container-features {
@@ -371,7 +383,7 @@ section .wrapper .item {
     padding: 6rem 0;
     background-color: var(--off-white);
     box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 
-                0 0.1rem 0.3rem rgba(0, 0, 0, 0.08);
+                0 0.1rem 0.3rem rgba(0, 0, 0, 0.08);  
 }
 
 section .best-features-title {
@@ -642,5 +654,15 @@ section .container-features .item-features {
 @keyframes scrollLeft {
     to {
         left: -20rem;
+    }
+}
+
+@keyframes scrollReveal {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    } to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
     }
 }
