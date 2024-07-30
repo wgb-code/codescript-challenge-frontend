@@ -17,7 +17,9 @@
         <title>CodeScript: Inovação em Rastreamento de Frotas e Soluções para Agronegócio | Software Personalizado</title>
     </head>
 
-    <body>
+    <body id="indexBody">
+    <div id="preloader"></div>
+
         <nav aria-label="Main navigation">
             <h1>CodeScript <span>Technology</span></h1>
             <ul class="menu-web">
@@ -70,7 +72,6 @@
                 <img src="app/assets/svgs/close.svg" alt="Ícone de fechar menu" title="Fechar menu de navegação" width="30" height="30">
             </button>
         </nav>
-    
         <section class="navigation-menu">
             <ul class="menu-mobile">
                 <li>
@@ -117,33 +118,35 @@
         </section>
         <main class="carousel">
             <section class="list">
-                <article class="item" style="background-image:url('app/assets/imgs/saude.jpg');">
+                <article class="item">
+                    <img src="app/assets/imgs/saude.webp" loading="lazy" alt="Saúde">
                     <div class="content">
                         <h2 class="title">Saúde</h2>
                         <p class="desc">Tecnologia para o bem-estar e para a melhoria de processos.</p>
                         <button>Ver Mais</button>
                     </div>
                 </article>
-                <article class="item" style="background-image:url('app/assets/imgs/agricultura.jpg');">
+                <article class="item">
+                    <img src="app/assets/imgs/agricultura.webp" loading="lazy" alt="Agronegócio">
                     <div class="content">
                         <h2 class="title">Agronegócio</h2>
                         <p class="desc">Otimizamos processos e oferecemos praticidade ao produtor rural.</p>
                         <button>Ver Mais</button>
                     </div>
                 </article>
-                <article class="item" style="background-image:url('app/assets/imgs/iot.jpg');">
+                <article class="item">
+                    <img src="app/assets/imgs/iot.webp" loading="lazy" alt="IoT">
                     <div class="content">
                         <h2 class="title">IoT</h2>
                         <p class="desc">Interligamos o mundo real com o mundo digital através de soluções tecnológicas.</p>
                         <button>Ver Mais</button>
                     </div>
                 </article>
-                <article class="item" style="background-image:url('app/assets/imgs/logveicular.jpg');">
+                <article class="item">
+                    <img src="app/assets/imgs/logveicular.webp" loading="lazy" alt="Logística Veicular">
                     <div class="content">
                         <h2 class="title">Logística Veicular</h2>
-                        <p class="desc">
-                            Criamos soluções para  monitoramento veicular, gestão de frotas e demais áreas de logística veicular.
-                        </p>
+                        <p class="desc">Criamos soluções para monitoramento veicular, gestão de frotas e demais áreas de logística veicular.</p>
                         <button>Ver Mais</button> 
                     </div>
                 </article>
@@ -153,7 +156,28 @@
                 <button class="next">></button>
             </section>
             <section class="timeRunning"></section>
-        </main>
+        </main>    
+        <section class="trust-by">
+            <article class="trust-title">
+                <h2>Marcas <span>Parceiras</span></h2>
+            </article>
+            <article class="wrapper">
+                <figure class="item item1"></figure>
+                <figure class="item item2"></figure>
+                <figure class="item item3"></figure>
+                <figure class="item item4"></figure>
+                <figure class="item item5"></figure>
+                <figure class="item item6"></figure>
+                <figure class="item item7"></figure>
+                <figure class="item item8"></figure>
+            </article>
+        </section>
+        <section class="best-features">
+            <article class="best-features-title">
+                <h2>Nossos melhores <span class="highlight">Recursos</span><br><span>Para sua empresa</span></h2>
+                <p>Descubra os recursos que fazem a diferença no sucesso do seu negócio.<br><span>Oferecemos uma gama de ferramentas de forma descomplicada e efetiva.</span></p>
+            </article>
+        </section>
         <script src="app/scripts/global.js" type="module"></script>
     </body>
 
