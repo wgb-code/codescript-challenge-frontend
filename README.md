@@ -105,3 +105,10 @@ Foi levado em consideração os seguintes critérios para decidir o layout da ap
   - **https://www.figma.com/design/9TYhscm5xYNhHtxeIDwEOk/Saas-%26-Corporate-Agency-Website-I-SaaSmito-(Community)?node-id=0-1&t=jq9gcF9vVSg9mjwQ-0**
 
   - **https://www.figma.com/design/6I4nl3WL2Y0BcunluGQezt/INWOOD---eCommerce-Landing-Page-(Community)?node-id=1001-2446&t=jq9gcF9vVSg9mjwQ-0**
+
+  ### Log de Trabalhos
+  - **27-07-2024** - Menu de Navegação.
+  - **28-07-2024** - Carousel.
+  - **29-07-2024** - Desenvolvimento do preloader.
+  - **30-07-2024** - Correções de Bugs & Sessão "Nossos Recursos".
+  

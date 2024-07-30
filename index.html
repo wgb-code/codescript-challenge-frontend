@@ -7,7 +7,6 @@
         <meta name="description" content="Desenvolvemos software customizado para rastreamento de veículos e agronegócio. Nossas soluções aumentam a produtividade e a eficiência operacional.">
         <meta name="keywords" content="software de rastreamento de veículos, gestão de frotas, agronegócio, telemática, software agrícola">
         <meta name="robots" content="index, follow">
-        <meta name="msapplication-TileColor" content="#ffffff">
         <meta property="og:title" content="Desenvolvimento de Software para Rastreio de Veículos e Agronegócio">
         <meta property="og:description" content="Desenvolvemos software customizado para rastreamento de veículos e agronegócio. Nossas soluções aumentam a produtividade e a eficiência operacional.">
         <meta property="og:type" content="website">
@@ -81,11 +80,11 @@
                     <a href="#sobre-nos" title="Ir para Sobre Nós">Sobre Nós</a>
                 </li>
                 <li>
-                    <a href="#servicos" aria-expanded="false" aria-haspopup="true" class="service-link" title="Serviços">
+                    <a href="#servicos" aria-expanded="false" aria-haspopup="true" class="service-link" title="Serviços" onclick="toggleDropdownMobile(event)">
                         <p>Serviços</p>
                         <img src="app/assets/svgs/arrow.svg" width="20" height="20" alt="Ícone para expandir menu">
                     </a>
-                    <ul class="list-service" aria-label="Submenu de Serviços">
+                    <ul class="list-service mobile" aria-label="Submenu de Serviços">
                         <li>
                             <a href="#saude" title="Ir para Saúde"><img src="app/assets/svgs/nav/saude.svg" alt="Ícone de saúde">
                                 <p>Saúde</p>
@@ -119,47 +118,68 @@
         <main class="carousel">
             <section class="list">
                 <article class="item">
-                    <img src="app/assets/imgs/saude.webp" loading="lazy" alt="Saúde">
-                    <div class="content">
+                    <picture>
+                        <source media="(min-width: 630px)" srcset="app/assets/imgs/saude/saude-sm.webp" type="image/">
+                        <source media="(min-width: 790px)" srcset="app/assets/imgs/saude/saude-md.webp" type="image/">
+                        <source media="(max-width: 1150px)" srcset="app/assets/imgs/saude/saude-lg.webp" type="image">
+                        <img src="app/assets/imgs/saude/saude.webp" loading="eager" alt="Saúde" title="Saúde">
+                    </picture>
+                    <article class="content">
                         <h2 class="title">Saúde</h2>
                         <p class="desc">Tecnologia para o bem-estar e para a melhoria de processos.</p>
-                        <button>Ver Mais</button>
-                    </div>
+                        <button title="Ir até a seção de saúde">Ver Mais</button>
+                    </article>
                 </article>
                 <article class="item">
-                    <img src="app/assets/imgs/agricultura.webp" loading="lazy" alt="Agronegócio">
-                    <div class="content">
+                    <picture>
+                        <source media="(min-width: 630px)" srcset="app/assets/imgs/agricultura/agricultura-sm.webp" type="image/">
+                        <source media="(min-width: 790px)" srcset="app/assets/imgs/agricultura/agricultura-md.webp" type="image/">
+                        <source media="(max-width: 1150px)" srcset="app/assets/imgs/agricultura/agricultura-lg.webp" type="image">
+                        <img src="app/assets/imgs/agricultura/agricultura.webp" loading="eager" alt="Agronegócio" title="Agronegócio">
+                    </picture>
+                    <article class="content">
                         <h2 class="title">Agronegócio</h2>
                         <p class="desc">Otimizamos processos e oferecemos praticidade ao produtor rural.</p>
-                        <button>Ver Mais</button>
-                    </div>
+                        <button title="Ir até a seção de Agronegócio">Ver Mais</button>
+                    </article>
                 </article>
                 <article class="item">
-                    <img src="app/assets/imgs/iot.webp" loading="lazy" alt="IoT">
-                    <div class="content">
+                    <picture>
+                        <source media="(min-width: 630px)" srcset="app/assets/imgs/iot/iot-sm.webp" type="image/">
+                        <source media="(min-width: 790px)" srcset="app/assets/imgs/iot/iot-md.webp" type="image/">
+                        <source media="(max-width: 1150px)" srcset="app/assets/imgs/iot/iot-lg.webp" type="image">
+                        <img src="app/assets/imgs/iot/iot.webp" loading="eager" alt="Internet das Coisas" title="Internet das Coisas">
+                    </picture>
+                    <article class="content">
                         <h2 class="title">IoT</h2>
                         <p class="desc">Interligamos o mundo real com o mundo digital através de soluções tecnológicas.</p>
-                        <button>Ver Mais</button>
-                    </div>
+                        <button title="Ir até seção de IoT">Ver Mais</button>
+                    </article>
                 </article>
                 <article class="item">
-                    <img src="app/assets/imgs/logveicular.webp" loading="lazy" alt="Logística Veicular">
-                    <div class="content">
+                    <picture>
+                        <source media="(min-width: 630px)" srcset="app/assets/imgs/logveicular/logveicular-sm.webp" type="image/">
+                        <source media="(min-width: 790px)" srcset="app/assets/imgs/logveicular/logveicular-md.webp" type="image/">
+                        <source media="(max-width: 1150px)" srcset="app/assets/imgs/logveicular/logveicular-lg.webp" type="image">
+                        <img src="app/assets/imgs/logveicular/logveicular.webp" loading="eager" alt="Logística Veícular" title="Logística Veícular">
+                    </picture>
+                    <article class="content">
                         <h2 class="title">Logística Veicular</h2>
                         <p class="desc">Criamos soluções para monitoramento veicular, gestão de frotas e demais áreas de logística veicular.</p>
-                        <button>Ver Mais</button> 
-                    </div>
+                        <button title="Ir até a seção de Logística Veícular">Ver Mais</button> 
+                    </article>
                 </article>
             </section>
             <section class="arrows">
-                <button class="prev"><</button>
-                <button class="next">></button>
+                <button class="prev" title="Avançar Slide"><</button>
+                <button class="next" title="Voltar Slide">></button>
             </section>
             <section class="timeRunning"></section>
         </main>    
         <section class="trust-by">
             <article class="trust-title">
                 <h2>Marcas <span>Parceiras</span></h2>
+                <p>Construindo relacionamentos de confiança</p>
             </article>
             <article class="wrapper">
                 <figure class="item item1"></figure>
@@ -173,9 +193,42 @@
             </article>
         </section>
         <section class="best-features">
-            <article class="best-features-title">
-                <h2>Nossos melhores <span class="highlight">Recursos</span><br><span>Para sua empresa</span></h2>
-                <p>Descubra os recursos que fazem a diferença no sucesso do seu negócio.<br><span>Oferecemos uma gama de ferramentas de forma descomplicada e efetiva.</span></p>
+            <article class="container-features">
+                <aside class="best-features-title">
+                    <h2>Nossos melhores <span class="highlight">Recursos</span><br><span>Para sua empresa</span></h2>
+                </aside>
+                <div class="item-features">
+                    <aside>
+                        <img src="app/assets/svgs/map.svg" alt="Mapas" title="Mapas" loading="lazy">
+                        <h3>Mapas</h3>
+                        <p>Ótima experiência com mapas como Google Maps e Leaflet.</p>
+                    </aside>
+                    <aside>
+                        <img src="app/assets/svgs/telemetry.svg" alt="Telemetria" title="Telemetria" loading="lazy">
+                        <h3>Telemetria</h3>
+                        <p>Nós conhecemos a telemetria. Confiar seu sistema a especialistas pode economizar tempo, dinheiro e evitar erros.</p>
+                    </aside>
+                    <aside>
+                        <img src="app/assets/svgs/data.svg" alt="Grandes Dados" title="Grandes Dados" loading="lazy">
+                        <h3>Grandes Dados</h3>
+                        <p>Gerenciar grandes volumes de dados em bancos de dados não é um problema para nós.</p>
+                    </aside>
+                    <aside>
+                        <img src="app/assets/svgs/simcard.svg" alt="SIM Card" title="SIM Card" loading="lazy">
+                        <h3>Conhecimento SIM Card</h3>
+                        <p>Experiência na transmissão de pacotes de dados GPRS através de operadoras de rede móvel.</p>
+                    </aside>
+                    <aside>
+                        <img src="app/assets/svgs/iot.svg" alt="Internet das Coisas" title="Internet das Coisas" loading="lazy">
+                        <h3>Dispositivos IoT</h3>
+                        <p>Podemos construir soluções de agronegócio com APIs de dispositivos e servidores IoT.</p>
+                    </aside>
+                    <aside>
+                        <img src="app/assets/svgs/iot.svg" alt="Satélite" title="Satélite" loading="lazy">
+                        <h3>Satélite</h3>
+                        <p>Experiência em transmissão de pacotes de dados via satélite</p>
+                    </aside>
+                </div>
             </article>
         </section>
         <script src="app/scripts/global.js" type="module"></script>
