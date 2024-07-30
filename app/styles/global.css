@@ -51,6 +51,7 @@ nav ul li .service-link p,
 
 nav ul .list-service,
 .menu-mobile li .list-service {
+    padding-left: 2rem;
     display: none;
 }
 
@@ -137,7 +138,10 @@ nav button:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 2rem;
+}
+
+.carousel .list .item picture {
+    height: 100%;
 }
 
 .carousel .list .item:nth-child(1) {
@@ -251,19 +255,21 @@ nav button:hover {
     z-index: 100;
     width: 0;
     height: 0.4rem;
-    background-color: var(--primary-dark);
+    background-color: var(--secondary-text);
     left: 0; top: 0;
     animation: runningTime 7s linear forwards;
 }
 
 section .trust-title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 6rem 0;
 }
 
 section .trust-title h2 {
-    font-size: 5.2rem;
+    font-size: 4rem;
     letter-spacing: -0.1rem;
     user-select: none;
     color: var(--off-white);
@@ -271,6 +277,12 @@ section .trust-title h2 {
 
 section .trust-title h2 span {
     color: var(--secondary-text);
+}
+
+section .trust-title p {
+    font-size: 1.6rem;
+    color: var(--off-white);
+    letter-spacing: 1px;
 }
 
 section .wrapper {
@@ -354,27 +366,37 @@ section .wrapper .item {
     padding: 0 0 6rem 0;
 }
 
+.best-features .container-features {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: var(--off-white);
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1), 
+                0 0.1rem 0.3rem rgba(0, 0, 0, 0.08);
+}
+
 section .best-features-title {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 section .best-features-title h2 {
     gap: 1rem;
     line-height: 1;
     text-align: center;
-    font-size: 5.2rem;
+    font-size: 4rem;
     letter-spacing: -0.1rem;
     user-select: none;
-    color: var(--off-white);
+    color: var(--primary-dark);
     z-index: 100;
 }
 
 section .best-features-title .highlight {
     position: relative;
     display: inline-block;
-    color: var(--off-white);
+    color: var(--primary-dark);
 }
 
 section .best-features-title .highlight::before {
@@ -393,14 +415,41 @@ section .best-features-title h2 span {
     color: var(--secondary-text);
 }
 
-section .best-features-title p {
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-size: 1.4rem;
+section .container-features .item-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 6rem;
     user-select: none;
+}
+
+.item-features aside {
+    text-align: center;
     padding: 2rem;
-    color: var(--gray-box);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    border: 0.1rem solid var(--gray-box);
+    border-radius: 0.3rem;
+    background-color: var(--off-white);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.item-features img {
+    max-width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background-color: var(--gray-box);
+}
+
+.item-features h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+}
+
+.item-features p {
+    font-size: 1.3rem;
+    color: var(--gray-text);
 }
 
 @media screen and (max-width: 1800px) {
@@ -460,21 +509,6 @@ section .best-features-title p {
         background-color: var(--gray-box);
     }
 
-    .menu-mobile li:hover .list-service {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        position: relative;
-        top: 0;
-        left: 0;
-        background-color: var(--off-white);
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        box-shadow: 0 1rem 2rem -1rem hsla(220, 68%, 12%, 0.1);
-        z-index: 102;
-        padding: 1rem;
-    }
-
     .menu-mobile li .list-service li {
         display: flex;
     }
@@ -527,6 +561,10 @@ section .best-features-title p {
 }
 
 @media screen and (max-width: 740px) {
+    #preloader {
+        display: none !important;
+    }
+
     nav {
         padding: 3rem 3rem;
     }
@@ -562,15 +600,18 @@ section .best-features-title p {
         gap: 0;
     }
 
-    section .best-features-title p {
-        padding: 2rem;
+    section .container-features .item-features {
+        grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media screen and (max-width: 580px) {
     .arrows {
         right: 25rem;
+    }
+
+    section .container-features .item-features {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
