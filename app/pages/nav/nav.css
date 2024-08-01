@@ -1,0 +1,49 @@
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4; /* Cor de fundo opcional */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+/* Estiliza a lista do menu */
+nav ul {
+    display: flex;
+    list-style-type: none; /* Remove os marcadores */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza os itens da lista */
+nav ul li {
+    position: relative; /* Necessário para posicionar o submenu */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+}
+
+/* Estiliza os links dos itens */
+nav ul li a {
+    color: #333; /* Cor do texto */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente no centro */
+}
+
+/* Estiliza o item de serviços para mostrar a seta */
+nav ul .nav-service {
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+nav ul .nav-service ul {
+    display: none; /* Oculta o submenu */
+    position: absolute; /* Posiciona o submenu abaixo do item pai */
+    top: 100%; /* Posiciona o submenu abaixo do item pai */
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Estiliza os itens do submenu */
+nav ul .nav-service ul li {
+    padding: 0.5rem 1rem;
+}
