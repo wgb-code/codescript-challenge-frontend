@@ -1,3 +1,215 @@
 @import url('vendor/reset.css');
 @import url('vendor/colors.css');
-@import url('vendor/preloader.css');
+@import url('vendor/animations.css');
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 7.5rem);
+    padding: 0 10rem;
+    box-sizing: border-box;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+    line-height: 1.2;
+    color: var(--primary-dark);
+    user-select: none;
+}
+
+main h2 span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--gray-box);
+    color: var(--secondary-text);
+}
+
+main p {
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--gray-text);
+    user-select: none;
+}
+
+main .mainButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+main .mainButtons button {
+    padding: 1.2rem 5.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+main .mainButtons #btnService {
+    border: none;
+    background-color: var(--primary-dark);
+    color: var(--off-white);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+main .mainButtons #btnService:hover {
+    background-color: var(--secondary-text);
+    transform: translateY(-2px);
+}
+
+
+main .mainButtons #btnContact {
+    border: 0.1rem solid var(--secondary-text);
+    background-color: transparent;
+    color: var(--secondary-text);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+main .mainButtons #btnContact:hover {
+    background-color: var(--secondary-text);
+    color: var(--off-white);
+    transform: translateY(-2px);
+}
+
+#partnerCompanies {
+    background-color: var(--primary-dark);
+    user-select: none;
+}
+
+#partnerCompanies h3 {
+    padding: 5rem 10rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--off-white);
+    text-align: center;
+}
+
+#partnerCompanies .logosCompanies {
+    padding: 8rem 0;
+    background-color: var(--off-white);
+    white-space: nowrap;
+    position: relative;
+}
+
+#partnerCompanies .logosCompanies:before,
+#partnerCompanies .logosCompanies:after{
+    position: absolute;
+    top: 0;
+    width: 45rem;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+#partnerCompanies .logosCompanies:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--off-white));
+}
+
+#partnerCompanies .logosCompanies:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--off-white));
+}
+
+#partnerCompanies .logosCompanies .logosSlide {
+    display: inline-flex;
+    animation: sliderCompanies 10s linear infinite;
+}
+
+#partnerCompanies .logosCompanies:hover .logosSlide {
+    animation-play-state: paused;
+}
+
+#partnerCompanies .logosCompanies .logosSlide img {
+    height: 5rem;
+    margin: 0 4rem;
+}
+
+#bestFeatures .bestFeaturesDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding: 0 10rem;
+    user-select: none;
+}
+
+#bestFeatures .bestFeaturesDescription h3 {
+    font-size: 5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    text-align: center;
+}
+
+#bestFeatures .bestFeaturesDescription h3 span {
+    color: var(--secondary-text);
+}
+
+#bestFeatures .bestFeaturesDescription p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    color: var(--gray-text);
+}
+
+.bestFeatures {
+    padding: 0 10rem;
+    background-color: var(--off-white);
+}
+
+.bestFeaturesItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+}
+
+.bestFeaturesContainerItems {
+    background-color: var(--gray-box);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.bestFeaturesContainerItems figure {
+    margin: 0;
+}
+
+.bestFeaturesContainerItems img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bestFeaturesContainerItems h5 {
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-dark);
+}
+
+.bestFeaturesContainerItems p {
+    font-size: 1rem;
+    color: var(--gray-text);
+}

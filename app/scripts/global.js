@@ -1,3 +1,4 @@
-import { navTemplate } from '../pages/nav/nav.js';
+import { navTemplate, openNavbar } from '../pages/nav/nav.js';
 
-document.addEventListener('DOMContentLoaded', navTemplate);
+navTemplate();
+window.openNavbar = openNavbar;
