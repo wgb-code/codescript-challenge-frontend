@@ -1,0 +1,40 @@
+<nav aria-label="Main Navigation">
+    <a href="#">
+        <img src="/app/assets/imgs/logo/codescript.webp" width="180" height="43" alt="Logo da empresa CodeScript Technology" title="Voltar para tela inicial">
+    </a>
+    <ul id="nav-links">
+        <li title="Início">
+            <a href="#">Início</a>
+        </li>
+        <li title="Sobre Nós">
+            <a href="#">Sobre Nós</a>
+        </li>
+        <li class="nav-service" title="Abrir menu de serviços">
+            <input type="checkbox" id="service-toggle" hidden>
+            <label for="service-toggle">
+                <span>Serviços</span>
+                <img src="/app/assets/svgs/arrow.svg" alt="Expandir lista de Serviços" title="Expandir lista de Serviços">
+            </label>
+            <ul>
+                <li title="Sáude">
+                    <a href="#">Saúde</a>
+                </li>
+                <li title="Agronegócio">
+                    <a href="#">Agronegócio</a>
+                </li>
+                <li title="Internet das Coisas">
+                    <a href="#">IoT</a>
+                </li>
+                <li title="Logística Veicular">
+                    <a href="#">Logística Veicular</a>
+                </li>
+            </ul>
+        </li>
+        <li title="Contato">
+            <a href="#">Contato</a>
+        </li>
+        <button id="open-nav" title="Abrir Menu" onclick="openNavbar()">
+            <img src="/app/assets/svgs/menu.svg" alt="Menu de Abertura de Menu">
+        </button>
+    </ul>
+</nav>

@@ -109,6 +109,6 @@ Foi levado em consideração os seguintes critérios para decidir o layout da ap
   ### Log de Trabalhos
   - **27-07-2024** - Menu de Navegação.
   - **28-07-2024** - Carousel.
-  - **29-07-2024** - Desenvolvimento do preloader.
+  - **29-07-2024** - Correções de Bugs
   - **30-07-2024** - Correções de Bugs & Sessão "Nossos Recursos".
   

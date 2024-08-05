@@ -1,0 +1,126 @@
+@import url('/app/styles/vendor/colors.css');
+@import url('/app/styles/vendor/fonts.css');
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.6rem 3.2rem;
+    line-height: 2rem;
+    background-color: transparent;
+    color: var(--primary-dark);
+    user-select: none;
+    margin: 0;
+    -webkit-box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
+    -moz-box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
+    box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.03); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-dark);
+}
+
+nav ul .nav-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav ul .nav-service input[type="checkbox"] {
+    display: none;
+}
+
+nav ul .nav-service label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    padding: 0 0.8rem;
+    white-space: nowrap;
+}
+
+nav ul .nav-service label span {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-dark);
+}
+
+nav ul .nav-service ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    background-color: var(--off-white);
+    overflow: hidden;
+}
+
+nav ul .nav-service input[type="checkbox"]:checked + label + ul {
+    width: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    max-height: 30rem;
+    transition: max-height 0.3s ease-out;
+}
+
+nav ul .nav-service ul li {
+    padding: 0.5rem 1rem;
+}
+
+nav ul .nav-service ul li a {
+    color: var(--primary-dark);
+}
+
+#nav-links button {
+    display: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#nav-links button:hover {
+    background-color: rgba(0, 0, 0, 0.03); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav #nav-links .show {
+    display: block;
+}
+
+@media screen and (max-width: 589px){
+    nav ul li,
+    nav ul .nav-service {
+        display: none;
+    }
+
+    #nav-links #open-nav {
+        display: block;
+    }
+}
