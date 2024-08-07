@@ -76,16 +76,18 @@ main .mainButtons #btnService:hover {
 
 
 main .mainButtons #btnContact {
-    border: 0.1rem solid var(--secondary-text);
+    border: 0.1rem solid var(--primary-dark);
     background-color: transparent;
-    color: var(--secondary-text);
+    color: var(--primary-dark);
+    font-weight: 700;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 main .mainButtons #btnContact:hover {
-    background-color: var(--secondary-text);
+    background-color: var(--primary-dark);
+    border: none;
     color: var(--off-white);
     transform: translateY(-2px);
 }
@@ -96,17 +98,23 @@ main .mainButtons #btnContact:hover {
 }
 
 #partnerCompanies h3 {
-    padding: 5rem 10rem;
+    padding: 3rem 0;
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
     color: var(--off-white);
     text-align: center;
 }
 
+#partnerCompanies h3 span {
+    color: var(--secondary-text);
+}
+
 #partnerCompanies .logosCompanies {
-    padding: 8rem 0;
-    background-color: var(--off-white);
+    padding: 3rem 0;
+    background-color: var(--primary-dark);
     white-space: nowrap;
     position: relative;
 }
@@ -115,7 +123,7 @@ main .mainButtons #btnContact:hover {
 #partnerCompanies .logosCompanies:after{
     position: absolute;
     top: 0;
-    width: 45rem;
+    width: 10rem;
     height: 100%;
     content: '';
     z-index: 2;
@@ -123,17 +131,17 @@ main .mainButtons #btnContact:hover {
 
 #partnerCompanies .logosCompanies:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--off-white));
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--primary-dark));
 }
 
 #partnerCompanies .logosCompanies:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--off-white));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--primary-dark));
 }
 
 #partnerCompanies .logosCompanies .logosSlide {
     display: inline-flex;
-    animation: sliderCompanies 10s linear infinite;
+    animation: sliderCompanies 20s linear infinite;
 }
 
 #partnerCompanies .logosCompanies:hover .logosSlide {
@@ -143,6 +151,7 @@ main .mainButtons #btnContact:hover {
 #partnerCompanies .logosCompanies .logosSlide img {
     height: 5rem;
     margin: 0 4rem;
+    filter: invert(1) brightness(2) contrast(1);
 }
 
 #bestFeatures .bestFeaturesDescription {
@@ -176,8 +185,39 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeatures {
-    padding: 0 10rem;
+    padding: 8rem 10rem;
     background-color: var(--off-white);
+}
+
+.bestFeatures .bestFeaturesDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 0;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    user-select: none;
+}
+
+.bestFeatures .bestFeaturesDescription h2 {
+    color: var(--primary-dark);
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+}
+
+.bestFeatures .bestFeaturesDescription h2 span {
+    color: var(--secondary-text);
+}
+
+.bestFeatures .bestFeaturesDescription p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    color: var(--gray-text);
 }
 
 .bestFeaturesItems {
@@ -188,10 +228,21 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeaturesContainerItems {
-    background-color: var(--gray-box);
     padding: 2rem;
+    border: 0.1rem solid var(--gray-box);
     border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--off-white);
+    user-select: none;
+}
+
+.bestFeaturesContainerItems:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
 
 .bestFeaturesContainerItems figure {
@@ -204,12 +255,24 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeaturesContainerItems h5 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 1rem 0 0.5rem;
     color: var(--primary-dark);
+    font-weight: 600;
+    letter-spacing: 0.03rem;
 }
 
 .bestFeaturesContainerItems p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--gray-text);
+}
+
+#aboutCodescript {
+    display: flex;
+    padding: 8rem 10rem;
+    background-color: var(--primary-dark);
+}
+
+#aboutCodescript .aboutPicture img {
+    border-radius: 40rem 20rem 50rem 14rem;
 }

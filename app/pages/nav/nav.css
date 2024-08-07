@@ -1,6 +1,3 @@
-@import url('/app/styles/vendor/colors.css');
-@import url('/app/styles/vendor/fonts.css');
-
 nav {
     display: flex;
     justify-content: space-between;
