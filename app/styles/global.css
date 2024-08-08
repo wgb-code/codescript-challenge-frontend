@@ -195,7 +195,7 @@ main .mainButtons #btnContact:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 5rem 0;
+    padding: 0 0 5rem 0rem;
     gap: 0.5rem;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -272,11 +272,118 @@ main .mainButtons #btnContact:hover {
 }
 
 #aboutCodescript {
-    display: flex;
-    padding: 8rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: var(--primary-dark);
 }
 
-#aboutCodescript .aboutPicture img {
-    border-radius: 40rem 20rem 50rem 14rem;
+.aboutDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 4rem 2rem;
+    color: var(--off-white);
+}
+
+.aboutDescription h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+}
+
+.aboutDescription h3 span {
+    color: var(--secondary-text);
+}
+
+.aboutDescription h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    letter-spacing: -0.01rem;
+    text-transform: uppercase;
+}
+
+.aboutDescription .heading-bg {
+    width: 6.4rem;
+    height: 0.2rem;
+    position: relative;
+    background-color: var(--secondary-text);
+}
+
+.aboutDescription .heading-bg:after {
+    position: absolute;
+    content: "";
+    left: 1.1rem;
+    right: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+    width: 2.3rem;
+    height: 0.6rem;
+    border-radius: 3rem;
+    background-color: var(--secondary-text);
+}
+
+.aboutDescription .heading-bg.hb-left {
+    margin: 1.5rem 0 3.2rem;
+}
+
+.aboutDescription p {
+    font-size: 1.4rem;
+    text-align: justify;
+    letter-spacing: 0.05rem;
+    line-height: 2;
+    padding-right: 10rem;
+}
+
+.aboutDifferent h5 {
+    margin: 3.2rem 0 3.2rem 0;
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.aboutDifferent h5 span {
+    color: var(--secondary-text);
+}
+
+.aboutDifferenteItemBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--off-white);
+    color: var(--primary-dark);
+    width: clamp(30rem, 50rem, 55rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aboutDifferenteItemBox h4 {
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+#aboutViewMore {
+    margin-top: 3.2rem;
+    padding: 1.2rem 5.2rem;
+    border: 0.1rem solid var(--off-white);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--off-white);
+    padding: 2rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#aboutViewMore:hover {
+    transform: translateY(-2px);
 }
