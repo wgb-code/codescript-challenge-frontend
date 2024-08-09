@@ -12,7 +12,7 @@ main {
     box-sizing: border-box;
 }
 
-main h2 {
+main h1 {
     text-align: center;
     font-size: 5rem;
     font-family: 'Inter', sans-serif;
@@ -23,13 +23,15 @@ main h2 {
     user-select: none;
 }
 
-main h2 span {
+main h1 span {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    background-color: var(--gray-box);
-    color: var(--secondary-text);
+    color: transparent;
+    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 main p {
@@ -93,65 +95,64 @@ main .mainButtons #btnContact:hover {
 }
 
 #partnerCompanies {
-    background-color: var(--primary-dark);
     user-select: none;
 }
 
-#partnerCompanies h3 {
-    padding: 3rem 0;
+#partnerCompanies h2 {
+    padding: 3rem 10rem 0 10rem;
+    margin-block-end: 1.6rem;
     font-family: 'Inter', sans-serif;
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: -0.05rem;
-    line-height: 1.2;
-    color: var(--off-white);
-    text-align: center;
+    color: var(--primary-dark);
+    text-align: left;
 }
 
-#partnerCompanies h3 span {
-    color: var(--secondary-text);
+#partnerCompanies h2 span {
+    color: transparent;
+    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#partnerCompanies h3 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    padding: 0 10rem;
+    color: var(--primary-dark);
 }
 
 #partnerCompanies .logosCompanies {
-    padding: 3rem 0;
-    background-color: var(--primary-dark);
+    display: flex;
+    margin: 8rem 10rem;
     white-space: nowrap;
     position: relative;
 }
 
-#partnerCompanies .logosCompanies:before,
-#partnerCompanies .logosCompanies:after{
-    position: absolute;
-    top: 0;
-    width: 10rem;
-    height: 100%;
-    content: '';
-    z-index: 2;
-}
-
-#partnerCompanies .logosCompanies:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--primary-dark));
-}
-
-#partnerCompanies .logosCompanies:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--primary-dark));
-}
-
 #partnerCompanies .logosCompanies .logosSlide {
-    display: inline-flex;
-    animation: sliderCompanies 20s linear infinite;
-}
-
-#partnerCompanies .logosCompanies:hover .logosSlide {
-    animation-play-state: paused;
+    display: flex;
+    gap: 3rem;
 }
 
 #partnerCompanies .logosCompanies .logosSlide img {
-    height: 5rem;
-    margin: 0 4rem;
-    filter: invert(1) brightness(2) contrast(1);
+    height: 3.2rem;
+}
+
+#partnerCompanies .partnerCompaniesDescription {
+    text-align: center;
+}
+
+#partnerCompanies .partnerCompaniesDescription p {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--gray-text);
+}
+
+#partnerCompanies .partnerCompaniesDescription p a {
+    color: var(--secondary-text);
 }
 
 #bestFeatures .bestFeaturesDescription {
@@ -161,19 +162,6 @@ main .mainButtons #btnContact:hover {
     gap: 10rem;
     padding: 0 10rem;
     user-select: none;
-}
-
-#bestFeatures .bestFeaturesDescription h3 {
-    font-size: 5rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.1rem;
-    text-align: center;
-}
-
-#bestFeatures .bestFeaturesDescription h3 span {
-    color: var(--secondary-text);
 }
 
 #bestFeatures .bestFeaturesDescription p {
@@ -191,8 +179,7 @@ main .mainButtons #btnContact:hover {
 
 .bestFeatures .bestFeaturesDescription {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 8rem;
     flex-direction: column;
     text-align: center;
     padding: 0 0 5rem 0rem;
@@ -202,38 +189,42 @@ main .mainButtons #btnContact:hover {
     user-select: none;
 }
 
-.bestFeatures .bestFeaturesDescription h2 {
+.bestFeatures .bestFeaturesDescription h3 {
+    margin-block-end: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
     color: var(--primary-dark);
-    font-size: 3rem;
-    letter-spacing: -0.05rem;
-    line-height: 1.2;
+    text-align: left;
 }
 
-.bestFeatures .bestFeaturesDescription h2 span {
-    color: var(--secondary-text);
+.bestFeatures .bestFeaturesDescription h3 span {
+    color: transparent;
+    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .bestFeatures .bestFeaturesDescription p {
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: 0.03rem;
-    color: var(--gray-text);
+    text-align: left;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    color: var(--primary-dark);
+    margin-block-end: 6.125rem;
 }
 
 .bestFeaturesItems {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 2rem;
+    column-gap: 5rem;
+    row-gap: 4rem;
 }
 
 .bestFeaturesContainerItems {
     padding: 2rem;
-    border-radius: 0.5rem;
-    -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.1);
-    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.1);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--off-white);
     user-select: none;
@@ -249,141 +240,81 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeaturesContainerItems img {
-    background-color: var(--gray-box);
     padding: 0.3rem;
     border-radius: 0.5rem;
     max-width: 100%;
     height: auto;
 }
 
-.bestFeaturesContainerItems h5 {
+.bestFeaturesContainerItems h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    margin: 1rem 0 0.5rem;
-    color: var(--primary-dark);
+    font-size: 2rem;
     font-weight: 600;
-    letter-spacing: 0.03rem;
+    margin-top: 3.2rem;
+    margin-bottom: 1.6rem;
+    color: var(--primary-dark);
+    letter-spacing: -.01em;
+    line-height: 1.12;
 }
 
 .bestFeaturesContainerItems p {
-    padding-top: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: var(--gray-text);
+    letter-spacing: .01em;
+    line-height: 1.8;
 }
 
-#aboutCodescript {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.aboutUs {
+    display: flex;
+    padding: 8rem 10rem;
     background-color: var(--primary-dark);
 }
 
-.aboutDescription {
+.aboutUs .aboutUsDescription {
     display: flex;
+    row-gap: 4rem;
     flex-direction: column;
-    align-items: left;
-    padding: 4rem 2rem;
-    color: var(--off-white);
+    margin-block-end: 6.125rem;
+    margin-right: 20rem;
 }
 
-.aboutDescription h3 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    line-height: 1.2;
-    padding: 0.5rem 0;
-    text-transform: uppercase;
-}
-
-.aboutDescription h3 span {
-    color: var(--secondary-text);
-}
-
-.aboutDescription h4 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 1rem 0;
-    letter-spacing: -0.01rem;
-    text-transform: uppercase;
-}
-
-.aboutDescription .heading-bg {
-    width: 6.4rem;
-    height: 0.2rem;
-    position: relative;
-    background-color: var(--secondary-text);
-}
-
-.aboutDescription .heading-bg:after {
-    position: absolute;
-    content: "";
-    left: 1.1rem;
-    right: auto;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin: 0 auto;
-    width: 2.3rem;
-    height: 0.6rem;
-    border-radius: 3rem;
-    background-color: var(--secondary-text);
-}
-
-.aboutDescription .heading-bg.hb-left {
-    margin: 1.5rem 0 3.2rem;
-}
-
-.aboutDescription p {
-    font-size: 1.4rem;
-    text-align: justify;
-    letter-spacing: 0.05rem;
-    line-height: 2;
-    padding-right: 10rem;
-}
-
-.aboutDifferent h5 {
-    margin: 3.2rem 0 3.2rem 0;
-    font-weight: 800;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-.aboutDifferent h5 span {
-    color: var(--secondary-text);
-}
-
-.aboutDifferenteItemBox {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    background-color: var(--off-white);
-    color: var(--primary-dark);
-    width: clamp(30rem, 50rem, 55rem);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.aboutDifferenteItemBox h4 {
-    text-transform: none;
-    font-weight: 500;
-    letter-spacing: 0.05rem;
-}
-
-#aboutViewMore {
-    margin-top: 3.2rem;
-    padding: 1.2rem 5.2rem;
-    border: 0.1rem solid var(--off-white);
-    border-radius: 0.5rem;
-    background-color: transparent;
-    color: var(--off-white);
-    padding: 2rem;
-    font-weight: 500;
+.aboutUs .aboutUsDescription h4 {
+    margin-block-end: 1.6rem;
     font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--off-white);
+    text-align: left;
 }
 
-#aboutViewMore:hover {
-    transform: translateY(-2px);
+.aboutUs .aboutUsDescription h4 span {
+    color: transparent;
+    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.aboutUs .aboutUsDescription h5 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    color: var(--off-white);
+    max-width: 70rem;
+}
+
+
+.aboutUs .aboutUsDescription p {
+    font-size: 2rem;
+    line-height: 1.6;
+    letter-spacing: .01em;
+    margin-bottom: 3.2rem;
+    color: var(--gray-box);
+    text-align: justify
+}
+
+.aboutUs .aboutUsIlustration {
+    max-width: 100%;
+    max-height: 100%;
 }
