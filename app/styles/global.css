@@ -1,6 +1,5 @@
 @import url('vendor/reset.css');
 @import url('vendor/colors.css');
-@import url('vendor/animations.css');
 
 main {
     display: flex;
@@ -66,13 +65,9 @@ main .mainButtons #btnService {
     border: none;
     background-color: var(--primary-dark);
     color: var(--off-white);
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 main .mainButtons #btnService:hover {
-    background-color: var(--secondary-text);
     transform: translateY(-2px);
 }
 
@@ -82,15 +77,9 @@ main .mainButtons #btnContact {
     background-color: transparent;
     color: var(--primary-dark);
     font-weight: 700;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 main .mainButtons #btnContact:hover {
-    background-color: var(--primary-dark);
-    border: none;
-    color: var(--off-white);
     transform: translateY(-2px);
 }
 
@@ -105,7 +94,7 @@ main .mainButtons #btnContact:hover {
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-dark);
-    text-align: left;
+    text-align: center;
 }
 
 #partnerCompanies h2 span {
@@ -122,6 +111,7 @@ main .mainButtons #btnContact:hover {
     letter-spacing: -.03em;
     padding: 0 10rem;
     color: var(--primary-dark);
+    text-align: center;
 }
 
 #partnerCompanies .logosCompanies {
@@ -143,6 +133,8 @@ main .mainButtons #btnContact:hover {
 
 #partnerCompanies .partnerCompaniesDescription {
     text-align: center;
+    padding: 0 10rem;
+    margin-top: 4rem;
 }
 
 #partnerCompanies .partnerCompaniesDescription p {
@@ -153,7 +145,10 @@ main .mainButtons #btnContact:hover {
 }
 
 #partnerCompanies .partnerCompaniesDescription p a {
-    color: var(--secondary-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--primary-dark);
 }
 
 #bestFeatures .bestFeaturesDescription {
@@ -183,7 +178,7 @@ main .mainButtons #btnContact:hover {
     margin-top: 8rem;
     flex-direction: column;
     text-align: center;
-    padding: 0 0 5rem 0rem;
+    padding: 0 10rem 5rem 10rem;
     gap: 0.5rem;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -196,7 +191,7 @@ main .mainButtons #btnContact:hover {
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-dark);
-    text-align: left;
+    text-align: center;
 }
 
 .bestFeatures .bestFeaturesDescription h3 span {
@@ -207,13 +202,13 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeatures .bestFeaturesDescription p {
-    text-align: left;
+    text-align: center;
     font-weight: 700;
     font-size: 4rem;
     line-height: 1.12;
     letter-spacing: -.03em;
     color: var(--primary-dark);
-    margin-block-end: 6.125rem;
+    margin-block-end: 6rem;
 }
 
 .bestFeaturesItems {
@@ -228,6 +223,7 @@ main .mainButtons #btnContact:hover {
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--off-white);
+    border-radius: 1.6rem;
     user-select: none;
 }
 
@@ -267,16 +263,18 @@ main .mainButtons #btnContact:hover {
 
 .aboutUs {
     display: flex;
-    padding: 8rem 10rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 10rem;
     background-color: var(--primary-dark);
 }
 
 .aboutUs .aboutUsDescription {
+    flex: 0 0 50%;
     display: flex;
-    row-gap: 4rem;
+    justify-content: center;
     flex-direction: column;
-    margin-block-end: 6.125rem;
-    margin-right: 20rem;
 }
 
 .aboutUs .aboutUsDescription h4 {
@@ -302,20 +300,105 @@ main .mainButtons #btnContact:hover {
     line-height: 1.12;
     letter-spacing: -.03em;
     color: var(--off-white);
-    max-width: 70rem;
+    max-width: 60rem;
+    margin-bottom: 3rem;
 }
 
-
 .aboutUs .aboutUsDescription p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.6;
     letter-spacing: .01em;
-    margin-bottom: 3.2rem;
     color: var(--gray-box);
-    text-align: justify
+    text-align: left;
+    max-width: 60rem;
+}
+
+.aboutUs .aboutUsDescription .aboutUsButton {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 120%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--off-white);
 }
 
 .aboutUs .aboutUsIlustration {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
     max-height: 100%;
+}
+
+.aboutUs .aboutUsIlustration img {
+    border-radius: 1.6rem;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whyWeAreDifferent {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 10rem;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentDescription h5 {
+    margin-block-end: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.whyWeAreDifferent .whyWeAreDifferentDescription h5 span {
+    color: transparent;
+    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentDescription p {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    color: var(--primary-dark);
+    margin-block-end: 6rem;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentBoxItems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems {
+    padding: 3.2rem;
+    border: 0.1rem solid var(--primary-dark);
+    border-radius: 1.6rem;
+    transition: box-shadow .15s ease-out;
+}
+
+.whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .06);
+}
+
+.whyWeAreDifferentItems .whyWeAreDifferentItemsText {
+
 }
