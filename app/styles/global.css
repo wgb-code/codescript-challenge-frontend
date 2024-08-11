@@ -268,6 +268,7 @@ main .mainButtons #btnContact:hover {
     align-items: center;
     padding: 6rem 10rem;
     background-color: var(--primary-dark);
+    user-select: none;
 }
 
 .aboutUs .aboutUsDescription {
@@ -348,6 +349,7 @@ main .mainButtons #btnContact:hover {
     display: flex;
     flex-direction: column;
     padding: 6rem 10rem;
+    user-select: none;
 }
 
 .whyWeAreDifferent .whyWeAreDifferentDescription {
@@ -390,7 +392,7 @@ main .mainButtons #btnContact:hover {
 
 .whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems {
     padding: 3.2rem;
-    border: 0.1rem solid var(--primary-dark);
+    border: 0.1rem solid var(--gray-box);
     border-radius: 1.6rem;
     transition: box-shadow .15s ease-out;
 }
@@ -399,6 +401,15 @@ main .mainButtons #btnContact:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .06);
 }
 
-.whyWeAreDifferentItems .whyWeAreDifferentItemsText {
+.whyWeAreDifferentItems .whyWeAreDifferentItemsText h6 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-dark);
+}
 
+.whyWeAreDifferentItems .whyWeAreDifferentItemsText p {
+    font-size: 1.4rem;
+    color: var(--gray-text);
 }
