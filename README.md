@@ -1,20 +1,20 @@
 # Desafio PREMIADO da CodeScript
 ## Regras:
 
-`Tecnologias:` 
+`Tecnologias:`
 
     Utilizar HTML, CSS & JAVASCRIPT. Não é permitido o uso de frameworks.
 
-`Conteúdo:` 
+`Conteúdo:`
 
     O site deve ser estático.
 
 `SEO:`
-    
+
     O projeto devem incluir o básico para um bom posicionamento no Google (SEO).
 
-`Design:` 
-    
+`Design:`
+
     1 - Deve possuir um design atrativo e moderno, mas ao mesmo tempo simples e de fácil navegação.
 
     2 - Deve seguir o padrão de cores da CodeScript.
@@ -24,7 +24,7 @@
     O site deve ser responsivo e pode utilizar bibliotecas como Bootstrap para auxiliar na responsividade.
 
 `Estrutura:`
-- Não pode ser uma página única (landingpage);     
+- Não pode ser uma página única (landingpage);
 - Deve possuir links de navegação para as outras páginas.
 
         Deve incluir as seguintes páginas:
@@ -82,7 +82,7 @@ O diretório `app` contém todos os recursos da aplicação, incluindo estilos, 
   - Este diretório organiza cada página da aplicação como módulos, contendo pacotes de html e css dentro de cada módulo.
 
         Observação, a pasta pages localizada em app/pages é responsável por pacotes apenas de html e css, optei em deixar os javascripts centralizados apenas dentro da pasta scripts.
-  
+
 ## Meta Tags usadas na aplicação
 Nesta aplicação me baseei somente nas meta tags recomendadas pelo **Google**, para saber mais quais são essas meta tags estarei deixando o link do artigo oficial abaixo:
 
@@ -111,4 +111,4 @@ Foi levado em consideração os seguintes critérios para decidir o layout da ap
   - **28-07-2024** - Carousel.
   - **29-07-2024** - Correções de Bugs
   - **30-07-2024** - Correções de Bugs & Sessão "Nossos Recursos".
-  
+  - **10-08-2024 até 12-08-2024** - Desenvolvimento da home page.

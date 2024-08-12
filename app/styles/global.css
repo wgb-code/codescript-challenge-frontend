@@ -1,5 +1,6 @@
 @import url('vendor/reset.css');
 @import url('vendor/colors.css');
+@import url('vendor/animations.css');
 
 main {
     display: flex;
@@ -11,7 +12,7 @@ main {
     box-sizing: border-box;
 }
 
-main h1 {
+main h2 {
     text-align: center;
     font-size: 5rem;
     font-family: 'Inter', sans-serif;
@@ -22,15 +23,15 @@ main h1 {
     user-select: none;
 }
 
-main h1 span {
+main h2 span {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    color: transparent;
     background: linear-gradient(90deg, #5530ff, var(--secondary-text));
     background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
 }
 
 main p {
@@ -65,9 +66,13 @@ main .mainButtons #btnService {
     border: none;
     background-color: var(--primary-dark);
     color: var(--off-white);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 main .mainButtons #btnService:hover {
+    background-color: var(--secondary-text);
     transform: translateY(-2px);
 }
 
@@ -77,78 +82,78 @@ main .mainButtons #btnContact {
     background-color: transparent;
     color: var(--primary-dark);
     font-weight: 700;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
 main .mainButtons #btnContact:hover {
+    background-color: var(--primary-dark);
+    border: none;
+    color: var(--off-white);
     transform: translateY(-2px);
 }
 
 #partnerCompanies {
+    background-color: var(--primary-dark);
     user-select: none;
 }
 
-#partnerCompanies h2 {
-    padding: 3rem 10rem 0 10rem;
-    margin-block-end: 1.6rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-    text-align: center;
-}
-
-#partnerCompanies h2 span {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
 #partnerCompanies h3 {
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.12;
-    letter-spacing: -.03em;
-    padding: 0 10rem;
-    color: var(--primary-dark);
+    padding: 3rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    color: var(--off-white);
     text-align: center;
+}
+
+#partnerCompanies h3 span {
+    color: var(--secondary-text);
 }
 
 #partnerCompanies .logosCompanies {
-    display: flex;
-    justify-content: center;
-    margin: 8rem 10rem;
+    padding: 3rem 0;
+    background-color: var(--primary-dark);
     white-space: nowrap;
     position: relative;
 }
 
+#partnerCompanies .logosCompanies:before,
+#partnerCompanies .logosCompanies:after{
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+#partnerCompanies .logosCompanies:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--primary-dark));
+}
+
+#partnerCompanies .logosCompanies:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--primary-dark));
+}
+
 #partnerCompanies .logosCompanies .logosSlide {
-    display: flex;
-    gap: 3rem;
+    display: inline-flex;
+    animation: sliderCompanies 20s linear infinite;
+}
+
+#partnerCompanies .logosCompanies:hover .logosSlide {
+    animation-play-state: paused;
 }
 
 #partnerCompanies .logosCompanies .logosSlide img {
-    height: 3.2rem;
-}
-
-#partnerCompanies .partnerCompaniesDescription {
-    text-align: center;
-    padding: 0 10rem;
-    margin-top: 4rem;
-}
-
-#partnerCompanies .partnerCompaniesDescription p {
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: var(--gray-text);
-}
-
-#partnerCompanies .partnerCompaniesDescription p a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    color: var(--primary-dark);
+    height: 5rem;
+    margin: 0 4rem;
+    filter: invert(1) brightness(2) contrast(1);
 }
 
 #bestFeatures .bestFeaturesDescription {
@@ -158,6 +163,19 @@ main .mainButtons #btnContact:hover {
     gap: 10rem;
     padding: 0 10rem;
     user-select: none;
+}
+
+#bestFeatures .bestFeaturesDescription h3 {
+    font-size: 5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    text-align: center;
+}
+
+#bestFeatures .bestFeaturesDescription h3 span {
+    color: var(--secondary-text);
 }
 
 #bestFeatures .bestFeaturesDescription p {
@@ -175,55 +193,52 @@ main .mainButtons #btnContact:hover {
 
 .bestFeatures .bestFeaturesDescription {
     display: flex;
-    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 10rem 5rem 10rem;
+    padding: 5rem 0;
     gap: 0.5rem;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     user-select: none;
 }
 
-.bestFeatures .bestFeaturesDescription h3 {
-    margin-block-end: 1.6rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
+.bestFeatures .bestFeaturesDescription h2 {
     color: var(--primary-dark);
-    text-align: center;
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
 }
 
-.bestFeatures .bestFeaturesDescription h3 span {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
+.bestFeatures .bestFeaturesDescription h2 span {
+    color: var(--secondary-text);
 }
 
 .bestFeatures .bestFeaturesDescription p {
-    text-align: center;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.12;
-    letter-spacing: -.03em;
-    color: var(--primary-dark);
-    margin-block-end: 6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    color: var(--gray-text);
 }
 
 .bestFeaturesItems {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
-    column-gap: 5rem;
-    row-gap: 4rem;
+    gap: 2rem;
 }
 
 .bestFeaturesContainerItems {
     padding: 2rem;
+    border: 0.1rem solid var(--gray-box);
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--off-white);
-    border-radius: 1.6rem;
     user-select: none;
 }
 
@@ -237,296 +252,29 @@ main .mainButtons #btnContact:hover {
 }
 
 .bestFeaturesContainerItems img {
-    padding: 0.3rem;
-    border-radius: 0.5rem;
     max-width: 100%;
     height: auto;
 }
 
-.bestFeaturesContainerItems h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 3.2rem;
-    margin-bottom: 1.6rem;
+.bestFeaturesContainerItems h5 {
+    font-size: 1.6rem;
+    margin: 1rem 0 0.5rem;
     color: var(--primary-dark);
-    letter-spacing: -.01em;
-    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
 }
 
 .bestFeaturesContainerItems p {
-    font-size: 1.6rem;
-    color: var(--gray-text);
-    letter-spacing: .01em;
-    line-height: 1.8;
-}
-
-.aboutUs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem 10rem;
-    background-color: var(--primary-dark);
-    user-select: none;
-}
-
-.aboutUs .aboutUsDescription {
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.aboutUs .aboutUsDescription h4 {
-    margin-block-end: 1.6rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--off-white);
-    text-align: left;
-}
-
-.aboutUs .aboutUsDescription h4 span {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.aboutUs .aboutUsDescription h5 {
-    text-align: left;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.12;
-    letter-spacing: -.03em;
-    color: var(--off-white);
-    max-width: 60rem;
-    margin-bottom: 3rem;
-}
-
-.aboutUs .aboutUsDescription p {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    letter-spacing: .01em;
-    color: var(--gray-box);
-    text-align: left;
-    max-width: 60rem;
-}
-
-.aboutUs .aboutUsDescription .aboutUsButton {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    margin-top: 3rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 120%;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: var(--off-white);
-}
-
-.aboutUs .aboutUsIlustration {
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.aboutUs .aboutUsIlustration img {
-    border-radius: 1.6rem;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.whyWeAreDifferent {
-    display: flex;
-    flex-direction: column;
-    padding: 6rem 10rem;
-    user-select: none;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentDescription {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentDescription h5 {
-    margin-block-end: 1.6rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.whyWeAreDifferent .whyWeAreDifferentDescription h5 span {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentDescription p {
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.12;
-    letter-spacing: -.03em;
-    color: var(--primary-dark);
-    margin-block-end: 6rem;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentBoxItems {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-    gap: 2rem;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems {
-    padding: 3.2rem;
-    border: 0.1rem solid var(--gray-box);
-    border-radius: 1.6rem;
-    transition: box-shadow .15s ease-out;
-}
-
-.whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .06);
-}
-
-.whyWeAreDifferentItems .whyWeAreDifferentItemsText h6 {
-    margin-top: 2.4rem;
-    margin-bottom: 0.8rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    color: var(--primary-dark);
-}
-
-.whyWeAreDifferentItems .whyWeAreDifferentItemsText p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--gray-text);
 }
 
-.weAreBrazilians .weAreBraziliansDescription {
+#aboutCodescript {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8rem 10rem 6rem 10rem;
-}
-
-.weAreBrazilians .weAreBraziliansDescription h5 {
-    margin-block-end: 1.6rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-    text-align: left;
-}
-
-.weAreBrazilians .weAreBraziliansDescription h5 span {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.weAreBrazilians .weAreBraziliansDescription p {
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.12;
-    letter-spacing: -.03em;
-    color: var(--primary-dark);
-    margin-block-end: 6rem;
-    text-align: left;
-}
-
-.weAreBrazilians .weAreBraziliansDescription button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 120%;
-    color: var(--primary-dark);
-    border: 0.1rem solid var(--gray-box);
-    padding: 0.8rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.weAreBrazilians .weAreBraziliansDescription button:hover {
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-.weAreBrazilians .weAreBraziliansDescription button img {
-    filter: invert(14%) sepia(85%) saturate(2000%) hue-rotate(170deg) brightness(35%) contrast(120%);
-}
-
-.weAreBraziliansItems {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 6rem 10rem;;
+    padding: 8rem 10rem;
     background-color: var(--primary-dark);
 }
 
-.weAreBraziliansItems .weAreBraziliansItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: var(--off-white);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.weAreBraziliansItems .weAreBraziliansItem .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    position: relative;
-}
-
-.weAreBraziliansItems .weAreBraziliansItem .header p {
-    color: transparent;
-    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.weAreBraziliansItems .weAreBraziliansItem .header h5 {
-    color: var(--primary-dark);
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.weAreBraziliansItems .weAreBraziliansItem .header button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.weAreBraziliansItems .weAreBraziliansItem .content {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--gray-text);
+#aboutCodescript .aboutPicture img {
+    border-radius: 40rem 20rem 50rem 14rem;
 }
