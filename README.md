@@ -112,3 +112,4 @@ Foi levado em consideração os seguintes critérios para decidir o layout da ap
   - **29-07-2024** - Correções de Bugs
   - **30-07-2024** - Correções de Bugs & Sessão "Nossos Recursos".
   - **10-08-2024 até 12-08-2024** - Desenvolvimento da home page.
+  - **13-08-2024** - Limpeza do Código e ajustes finos na estrutura.
