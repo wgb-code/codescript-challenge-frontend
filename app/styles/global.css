@@ -1,17 +1,11 @@
-@import url(vendor/import.css);
-
-
-
+@import url('vendor/config/import.css');
 
 /* Ajustes Titulos */
 #partnerCompanies h2 {
    line-height: var(--line-height-title);
-   font-size: min(max(var(--subtitle-sm), var(--subtitle-md)),var(--subtitle-lg));
+   font-size: min(max(var(--subtitle-sm), var(--subtitle-md)), var(--subtitle-lg));
    line-height: var(--line-height-subtitle);
 }
-
-
-
 
 main {
    display: flex;
@@ -19,19 +13,17 @@ main {
    justify-content: center;
    font-family: 'Inter', sans-serif;
    min-height: calc(100vh - 7.5rem);
-   padding: min(max(var(--padding-sm), var(--padding-md)),var(--padding-lg));
+   padding: min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
    font-weight: 600;
 }
 
-
 main h1 {
    text-align: center;
-   font-size: min(max(var(--title-sm), var(--title-md)),var(--title-lg));
+   font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
    letter-spacing: var(--letter-spacing-title);
    line-height: var(--line-height-title);
    color: var(--primary-dark);
 }
-
 
 main h1 b {
    color: transparent;
@@ -39,7 +31,6 @@ main h1 b {
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 main p {
    margin-top: 5rem;
@@ -51,14 +42,12 @@ main p {
    color: var(--gray-text);
 }
 
-
 main .mainButtons {
    display: flex;
    justify-content: center;
    gap: 1rem;
    margin-top: 2.5rem;
 }
-
 
 main .mainButtons button {
    padding: var(--padding-btn);
@@ -69,20 +58,15 @@ main .mainButtons button {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
 main .mainButtons #btnService {
    border: none;
    background-color: var(--primary-dark);
    color: var(--off-white);
 }
 
-
 main .mainButtons #btnService:hover {
    transform: translateY(-0.2rem);
 }
-
-
-
 
 main .mainButtons #btnContact {
    border: var(--border-btn) solid var(--primary-dark);
@@ -90,11 +74,9 @@ main .mainButtons #btnContact {
    color: var(--primary-dark);
 }
 
-
 main .mainButtons #btnContact:hover {
    transform: translateY(-0.2rem);
 }
-
 
 #partnerCompanies p {
    margin-bottom: var(--paragraph-mb);
@@ -105,14 +87,12 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 #partnerCompanies p b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 #partnerCompanies h2 {
    font-weight: 700;
@@ -124,7 +104,6 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 #partnerCompanies .logosCompanies {
    display: flex;
    justify-content: center;
@@ -133,17 +112,14 @@ main .mainButtons #btnContact:hover {
    position: relative;
 }
 
-
 #partnerCompanies .logosCompanies .logosSlide {
    display: flex;
    gap: 3rem;
 }
 
-
 #partnerCompanies .logosCompanies .logosSlide img {
    height: 3.2rem;
 }
-
 
 #partnerCompanies .partnerCompaniesDescription {
    text-align: center;
@@ -152,7 +128,6 @@ main .mainButtons #btnContact:hover {
    background-color: var(--primary-dark);
 }
 
-
 #partnerCompanies .partnerCompaniesDescription p {
    font-weight: 600;
    font-size: 1.6rem;
@@ -160,14 +135,12 @@ main .mainButtons #btnContact:hover {
    color: var(--off-white);
 }
 
-
 #partnerCompanies .partnerCompaniesDescription p a {
    display: inline-flex;
    align-items: center;
    gap: 0.3rem;
    color: var(--secondary-text);
 }
-
 
 #bestFeatures .bestFeaturesDescription {
    display: flex;
@@ -177,7 +150,6 @@ main .mainButtons #btnContact:hover {
    padding: 0 10rem;
 }
 
-
 #bestFeatures .bestFeaturesDescription p {
    font-size: 1.6rem;
    font-weight: 500;
@@ -186,12 +158,10 @@ main .mainButtons #btnContact:hover {
    color: var(--gray-text);
 }
 
-
 .bestFeatures {
    padding: 8rem 10rem;
    background-color: var(--off-white);
 }
-
 
 .bestFeatures .bestFeaturesDescription {
    display: flex;
@@ -204,7 +174,6 @@ main .mainButtons #btnContact:hover {
    font-weight: 600;
 }
 
-
 .bestFeatures .bestFeaturesDescription h3 {
    margin-block-end: 1.6rem;
    font-family: 'Inter', sans-serif;
@@ -214,14 +183,12 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .bestFeatures .bestFeaturesDescription h3 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .bestFeatures .bestFeaturesDescription p {
    text-align: center;
@@ -233,7 +200,6 @@ main .mainButtons #btnContact:hover {
    margin-block-end: 6rem;
 }
 
-
 .bestFeaturesItems {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -242,7 +208,6 @@ main .mainButtons #btnContact:hover {
    row-gap: 4rem;
 }
 
-
 .bestFeaturesContainerItems {
    padding: 2rem;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -250,17 +215,14 @@ main .mainButtons #btnContact:hover {
    border-radius: 1.6rem;
 }
 
-
 .bestFeaturesContainerItems:hover {
    transform: translateY(-0.5rem);
-   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
-
 
 .bestFeaturesContainerItems figure {
    margin: 0;
 }
-
 
 .bestFeaturesContainerItems img {
    padding: 0.3rem;
@@ -268,7 +230,6 @@ main .mainButtons #btnContact:hover {
    max-width: 100%;
    height: auto;
 }
-
 
 .bestFeaturesContainerItems h4 {
    font-family: 'Inter', sans-serif;
@@ -281,14 +242,12 @@ main .mainButtons #btnContact:hover {
    line-height: 1.12;
 }
 
-
 .bestFeaturesContainerItems p {
    font-size: 1.6rem;
    color: var(--gray-text);
    letter-spacing: .01em;
    line-height: 1.8;
 }
-
 
 .aboutUs {
    display: flex;
@@ -299,14 +258,12 @@ main .mainButtons #btnContact:hover {
    background-color: var(--primary-dark);
 }
 
-
 .aboutUs .aboutUsDescription {
    flex: 0 0 50%;
    display: flex;
    justify-content: center;
    flex-direction: column;
 }
-
 
 .aboutUs .aboutUsDescription h4 {
    margin-block-end: 1.6rem;
@@ -317,14 +274,12 @@ main .mainButtons #btnContact:hover {
    text-align: left;
 }
 
-
 .aboutUs .aboutUsDescription h4 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .aboutUs .aboutUsDescription h5 {
    text-align: left;
@@ -337,7 +292,6 @@ main .mainButtons #btnContact:hover {
    margin-bottom: 3rem;
 }
 
-
 .aboutUs .aboutUsDescription p {
    font-size: 1.8rem;
    line-height: 1.6;
@@ -346,7 +300,6 @@ main .mainButtons #btnContact:hover {
    text-align: left;
    max-width: 90rem;
 }
-
 
 .aboutUs .aboutUsDescription .aboutUsButton {
    display: flex;
@@ -365,11 +318,9 @@ main .mainButtons #btnContact:hover {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
 .aboutUs .aboutUsDescription .aboutUsButton:hover {
    transform: translateY(-2px);
 }
-
 
 .aboutUs .aboutUsIlustration {
    flex: 0 0 50%;
@@ -380,7 +331,6 @@ main .mainButtons #btnContact:hover {
    max-height: 100%;
 }
 
-
 .aboutUs .aboutUsIlustration img {
    border-radius: 1.6rem;
    object-fit: cover;
@@ -389,13 +339,11 @@ main .mainButtons #btnContact:hover {
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 .whyWeAreDifferent {
    display: flex;
    flex-direction: column;
    padding: 8rem 10rem;
 }
-
 
 .whyWeAreDifferent .whyWeAreDifferentDescription {
    display: flex;
@@ -403,7 +351,6 @@ main .mainButtons #btnContact:hover {
    align-items: center;
    text-align: center;
 }
-
 
 .whyWeAreDifferent .whyWeAreDifferentDescription h5 {
    margin-block-end: 1.6rem;
@@ -413,14 +360,12 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
 }
 
-
 .whyWeAreDifferent .whyWeAreDifferentDescription h5 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .whyWeAreDifferent .whyWeAreDifferentDescription p {
    font-weight: 700;
@@ -431,14 +376,12 @@ main .mainButtons #btnContact:hover {
    margin-block-end: 8rem;
 }
 
-
 .whyWeAreDifferent .whyWeAreDifferentBoxItems {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-gap: 2rem;
    gap: 2rem;
 }
-
 
 .whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems {
    padding: 3.2rem;
@@ -447,11 +390,9 @@ main .mainButtons #btnContact:hover {
    transition: box-shadow .15s ease-out;
 }
 
-
 .whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems:hover {
    box-shadow: 0 4px 8px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .06);
 }
-
 
 .whyWeAreDifferentItems .whyWeAreDifferentItemsText h6 {
    margin-top: 2.4rem;
@@ -461,12 +402,10 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
 }
 
-
 .whyWeAreDifferentItems .whyWeAreDifferentItemsText p {
    font-size: 1.4rem;
    color: var(--gray-text);
 }
-
 
 .weAreBrazilians .weAreBraziliansDescription {
    display: flex;
@@ -475,7 +414,6 @@ main .mainButtons #btnContact:hover {
    align-items: center;
    padding: 8rem 10rem;
 }
-
 
 .weAreBrazilians .weAreBraziliansDescription h5 {
    margin-block-end: 1.6rem;
@@ -486,14 +424,12 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .weAreBrazilians .weAreBraziliansDescription h5 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .weAreBrazilians .weAreBraziliansDescription p {
    font-weight: 700;
@@ -504,7 +440,6 @@ main .mainButtons #btnContact:hover {
    margin-block-end: 1.6rem;
    text-align: center;
 }
-
 
 .weAreBrazilians .weAreBraziliansDescription button {
    display: flex;
@@ -523,11 +458,9 @@ main .mainButtons #btnContact:hover {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
 .weAreBrazilians .weAreBraziliansDescription button:hover {
    transform: translateY(-2px);
 }
-
 
 .weAreBraziliansItems {
    display: flex;
@@ -537,15 +470,11 @@ main .mainButtons #btnContact:hover {
    background-color: var(--primary-dark);
 }
 
-
 .weAreBraziliansItems .weAreBraziliansItem {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-
-
-
 
 .weAreBraziliansItems .weAreBraziliansItem h5 {
    text-align: center;
@@ -554,7 +483,6 @@ main .mainButtons #btnContact:hover {
    font-family: 'Inter', sans-serif;
    font-size: 2rem;
 }
-
 
 .weAreBraziliansItems .weAreBraziliansItem p {
    font-size: 1.6rem;
@@ -565,7 +493,6 @@ main .mainButtons #btnContact:hover {
    margin-bottom: 2rem;
 }
 
-
 .labProjects {
    display: flex;
    flex-direction: column;
@@ -573,12 +500,10 @@ main .mainButtons #btnContact:hover {
    padding: 8rem 10rem;
 }
 
-
 .labProjects .labProjectsDescription {
    text-align: center;
    margin-bottom: 4rem;
 }
-
 
 .labProjects .labProjectsDescription h5 {
    margin-block-end: 1.6rem;
@@ -589,14 +514,12 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .labProjects .labProjectsDescription h5 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .labProjects .labProjectsDescription p {
    font-weight: 700;
@@ -608,13 +531,11 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .labProjectsItems {
    display: flex;
    flex-direction: column;
    margin: 4rem 0;
 }
-
 
 #labProjectsItems {
    display: flex;
@@ -625,16 +546,14 @@ main .mainButtons #btnContact:hover {
    transition: height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-
 #labProjectsItems.expanded {
    height: auto;
    opacity: 1;
 }
 
-
-.labProjectsItems > h5,
+.labProjectsItems>h5,
 .labProjectsMainItems h5,
-.labProjectsInfos h5{
+.labProjectsInfos h5 {
    margin-bottom: 2rem;
    font-family: 'Inter', sans-serif;
    font-size: 2rem;
@@ -642,8 +561,7 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
 }
 
-
-.labProjectsItems > p {
+.labProjectsItems>p {
    font-size: 1.6rem;
    color: var(--gray-text);
    letter-spacing: .01em;
@@ -653,7 +571,6 @@ main .mainButtons #btnContact:hover {
    padding: 0 10rem;
 }
 
-
 .gridLabProjectsItems {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
@@ -661,7 +578,6 @@ main .mainButtons #btnContact:hover {
    align-items: start;
    padding: 0 20rem;
 }
-
 
 .labProjectsMainItems {
    display: flex;
@@ -671,7 +587,6 @@ main .mainButtons #btnContact:hover {
    justify-self: start;
 }
 
-
 .labProjectsInfos {
    display: flex;
    flex-direction: column;
@@ -680,9 +595,6 @@ main .mainButtons #btnContact:hover {
    justify-self: center;
 }
 
-
-
-
 .labProjectsInfos ul li {
    display: flex;
    flex-direction: column;
@@ -690,7 +602,6 @@ main .mainButtons #btnContact:hover {
    align-items: flex-start;
    gap: 0.5rem;
 }
-
 
 .labProjectsMainItems ul li h6,
 .labProjectsInfos ul li h6 {
@@ -703,7 +614,6 @@ main .mainButtons #btnContact:hover {
    -webkit-background-clip: text;
 }
 
-
 .labProjectsMainItems ul li p,
 .labProjectsInfos ul li .labProjectsInfosFlex p {
    font-size: 1.6rem;
@@ -713,12 +623,10 @@ main .mainButtons #btnContact:hover {
    margin-bottom: 2rem;
 }
 
-
 .labProjectsInfos ul li .labProjectsInfosFlex {
    display: flex;
    gap: 0.5rem;
 }
-
 
 .labProjectsComposition {
    display: flex;
@@ -728,7 +636,6 @@ main .mainButtons #btnContact:hover {
    justify-self: end;
 }
 
-
 .labProjectsComposition h6 {
    margin-bottom: 2rem;
    font-family: 'Inter', sans-serif;
@@ -736,7 +643,6 @@ main .mainButtons #btnContact:hover {
    text-align: center;
    color: var(--primary-dark);
 }
-
 
 .labProjectsComposition ul li {
    display: flex;
@@ -746,7 +652,6 @@ main .mainButtons #btnContact:hover {
    text-align: end;
 }
 
-
 .labProjectsComposition ul li p {
    font-size: 1.6rem;
    color: var(--gray-text);
@@ -754,7 +659,6 @@ main .mainButtons #btnContact:hover {
    line-height: 1.5;
    margin-bottom: 2rem;
 }
-
 
 .labProjectsComposition ul li p b {
    font-family: 'Inter', sans-serif;
@@ -766,18 +670,15 @@ main .mainButtons #btnContact:hover {
    -webkit-background-clip: text;
 }
 
-
 .labProjectsComposition ul li p b {
    color: var(--primary-dark);
 }
-
 
 .expandLabProjectsItems {
    display: flex;
    justify-content: center;
    padding-bottom: 8rem;
 }
-
 
 .expandLabProjectsItems #labProjectsItemsExpand {
    font-size: 1.4rem;
@@ -792,11 +693,9 @@ main .mainButtons #btnContact:hover {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
 .expandLabProjectsItems #labProjectsItemsExpand:hover {
    transform: translateY(-2px);
 }
-
 
 .moreInfo {
    display: flex;
@@ -807,7 +706,6 @@ main .mainButtons #btnContact:hover {
    color: var(--off-white);
 }
 
-
 .moreInfo h5 {
    margin-block-end: 1.6rem;
    font-family: Inter, sans-serif;
@@ -816,11 +714,9 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .moreInfo h5 b {
    color: var(--secondary-text);
 }
-
 
 .moreInfo p {
    font-weight: 700;
@@ -830,7 +726,6 @@ main .mainButtons #btnContact:hover {
    margin-block-end: 1.6rem;
    text-align: center;
 }
-
 
 .moreInfo .contactRedirect button {
    display: flex;
@@ -849,11 +744,9 @@ main .mainButtons #btnContact:hover {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
 .moreInfo .contactRedirect button:hover {
    transform: translateY(-2px);
 }
-
 
 .ourTechnologies {
    display: flex;
@@ -861,7 +754,6 @@ main .mainButtons #btnContact:hover {
    align-items: center;
    padding: 8rem 10rem;
 }
-
 
 .ourTechnologies .ourTechnologiesDescription h5 {
    margin-block-end: 1.6rem;
@@ -872,14 +764,12 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
 .ourTechnologies .ourTechnologiesDescription h5 b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
-
 
 .ourTechnologies .ourTechnologiesDescription p {
    font-weight: 700;
@@ -891,7 +781,6 @@ main .mainButtons #btnContact:hover {
    text-align: center;
 }
 
-
-.ourTechnologies .ourTechnologiesLogos ul{
+.ourTechnologies .ourTechnologiesLogos ul {
    display: flex;
 }
