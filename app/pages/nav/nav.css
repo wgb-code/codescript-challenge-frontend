@@ -10,9 +10,9 @@ nav {
     color: var(--primary-dark);
     user-select: none;
     margin: 0;
-    -webkit-box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
-    -moz-box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
-    box-shadow: 0px 1px 0px 1px rgba(238,238,238,1);
+    -webkit-box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
+    -moz-box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
+    box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
 }
 
 nav ul {
@@ -30,7 +30,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: rgba(0, 0, 0, 0.03); 
+    background-color: rgba(0, 0, 0, 0.03);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -76,7 +76,8 @@ nav ul .nav-service ul {
     overflow: hidden;
 }
 
-nav ul .nav-service input[type="checkbox"]:checked + label + ul {
+
+nav ul .nav-service input[type="checkbox"]:checked+label+ul {
     width: 20rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -103,7 +104,7 @@ nav ul .nav-service ul li a {
 }
 
 #nav-links button:hover {
-    background-color: rgba(0, 0, 0, 0.03); 
+    background-color: rgba(0, 0, 0, 0.03);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -111,7 +112,8 @@ nav #nav-links .show {
     display: block;
 }
 
-@media screen and (max-width: 589px){
+@media screen and (max-width: 670px) {
+
     nav ul li,
     nav ul .nav-service {
         display: none;
