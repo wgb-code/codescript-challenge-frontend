@@ -1,12 +1,8 @@
 :root {
-    --title-lg: 5rem;
-    --title-md: 5vw;
-    --title-sm: 3.5rem;
     --title-fw: 700;
-
-    --subtitle-lg: 4rem;
-    --subtitle-md: 4vw;
-    --subtitle-sm: 2.5vw;
+    --title-lg: 4rem;
+    --title-md: 4.5vw;
+    --title-sm: 2.5vw;
 
     --paragraph-lg: 1.6rem;
     --paragraph-md: 5vw;
@@ -20,10 +16,12 @@
     --radius-lg: 0.5rem;
 
     --letter-spacing-title: -0.1rem;
+    --letter-spacing-subtitle: -.03em;
     --letter-spacing-paragraph: 0.01em;
 
     --line-height-title: 1.2;
-    --line-height-subtitle: 1.12 --line-height-paragraph: 1.8;
+    --line-height-subtitle: 1.12;
+    --line-height-paragraph: 1.8;
 
     --padding-btn: 1.2rem 5.2rem;
     --fontsize-btn: 1.4rem;

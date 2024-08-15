@@ -3,7 +3,6 @@
     --container-padding: 5%;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@
     user-select: none;
 }
 
-
 html {
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
@@ -20,13 +18,11 @@ html {
     overflow-x: hidden;
 }
 
-
 body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 }
-
 
 img,
 picture,
@@ -37,14 +33,12 @@ svg {
     max-width: 100%;
 }
 
-
 input,
 button,
 textarea,
 select {
     font: inherit;
 }
-
 
 p,
 h1,
@@ -56,11 +50,9 @@ h6 {
     overflow-wrap: break-word;
 }
 
-
 a {
     text-decoration: none !important;
 }
-
 
 ul {
     list-style: none;
