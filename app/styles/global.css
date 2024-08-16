@@ -784,39 +784,3 @@ main .mainButtons #btnContact:hover {
    object-fit: contain;
    flex-shrink: 0;
 }
-
-@media screen and (max-width: 1250px) {
-   .aboutUs {
-      flex-direction: column-reverse;
-   }
-
-   .aboutUs .aboutUsDescription {
-      margin-top: 6rem;
-   }
-
-   .aboutUs .aboutUsDescription p,
-   .aboutUs .aboutUsDescription h4,
-   .aboutUs .aboutUsDescription h5 {
-      text-align: justify;
-   }
-
-   .ourTechnologies .ourTechnologiesLogos ul li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .ourTechnologies .ourTechnologiesLogos ul li img {
-      width: 60%;
-      height: auto;
-      min-width: 7rem;
-      max-width: 8rem;
-   }
-}
-
-@media screen and (max-width: 880px) {
-   .bestFeaturesItems {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto);
-   }
-}
