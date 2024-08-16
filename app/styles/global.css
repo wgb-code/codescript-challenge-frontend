@@ -1009,4 +1009,12 @@ main .mainButtons #btnContact:hover {
    .gridLabProjectsItems .labProjectsComposition ul li p{
       font-size: 1.4rem;
    }
+
+   .gridLabProjectsItems .labProjectsMainItems {
+      padding: 3rem 1.5rem;
+   }
+
+   .gridLabProjectsItems .labProjectsMainItems ul {
+      padding: 0 1rem;
+   }
 }
