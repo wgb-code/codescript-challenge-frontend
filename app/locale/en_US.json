@@ -1,0 +1,110 @@
+{
+    "navigation": {
+        "nav.home": "Home",
+        "nav.aboutus": "About Us",
+        "nav.servicelist": {
+            "nav.service": "Service",
+            "nav.helth": "Health",
+            "nav.agribusiness": "Agribusiness",
+            "nav.iot": "IoT",
+            "nav.fleettracking": "Fleet Tracking"
+        },
+        "nav.contact": "Contact"
+    },
+
+    "main": {
+        "main.title": "Turning Ideas into Achievements We've been using technology for almost a decade to simplify your business",
+        "main.paragraph": "We offer technological solutions for various sectors. Click below to find out more.",
+        "main.buttons": {
+            "main.servicesbtn": "Services",
+            "main.contactbtn": "Contact"
+        }
+    },
+
+    "partnerCompanies": {
+        "partnerCompanies.paragraph": "Partner Companies",
+        "partnerCompanies.title": "Building trust and partnership with leading companies",
+        "partnerCompaniesDescription": {
+            "partnerCompaniesDescription.paragraph": "We are honored to build history with leading brands Let's build stories together?",
+            "partnerCompaniesDescription.link": "See how"
+        }
+    },
+
+    "bestFeatures": {
+        "bestFeaturesDescription": {
+            "bestFeaturesDescription.paragraph": "Our Resources",
+            "bestFeaturesDescription.title" :"Discover the resources that make a difference to the success of your business."
+        },
+
+        "bestFeaturesContainerItems": {
+            "bestFeaturesDatabase": {
+                "bestFeaturesDatabase.title": "Big Data",
+                "bestFeaturesDatabase.paragraph": "Managing large volumes of data is not a problem for us"
+            },
+
+            "bestFeaturesTelemetry": {
+                "bestFeaturesDatabase.title": "Telemetry experts",
+                "bestFeaturesDatabase.paragraph": "Entrusting your system to experts can save time, money and prevent errors"
+            },
+
+            "bestFeaturesIoT": {
+                "bestFeaturesIoT.title": "Internet of Things",
+                "bestFeaturesIoT.paragraph": "We build solutions with IoT devices"
+            },
+
+            "bestFeaturesMaps": {
+                "bestFeaturesMaps.title": "Maps",
+                "bestFeaturesMaps.paragraph": "Quality experience with maps such as Google Maps and OpenStreetMap"
+            },
+
+            "bestFeaturesCards": {
+                "bestFeaturesCards.title": "SIM Cards",
+                "bestFeaturesCards.paragraph": "Experience in the transmission of GPRS data packets by mobile network operators"
+            },
+
+            "bestFeaturesSatellites": {
+                "bestFeaturesSatellites.title": "Satellites",
+                "bestFeaturesSatellites.paragraph": "Experience in transmitting data packets via satellite"
+            }
+        }
+    },
+
+    "aboutus": {
+        "aboutus.paragraph": "About Us",
+        "aboutus.title": "Make it happen with our expertise",
+        "aboutus.text": "We are an innovative company with a qualified team and diverse backgrounds in the field of information technology. For almost a decade, we have been striving to turn our clients' dreams into reality. We are professionals who enjoy taking on challenges and turning ideas into achievements through technology, using a variety of languages and methodologies.",
+        "aboutus.button": "Learn how"
+    },
+
+    "whyWeAreDifferent": {
+        "whyWeAreDifferent.paragraph": "Why we are different",
+        "whyWeAreDifferent.title": "Discover the main differentials that make us stand out in the market",
+        "whyWeAreDifferentItems" : {
+            "whyWeAreDifferentConstantSearch": {
+                "whyWeAreDifferentConstantSearch.title": "We are in",
+                "whyWeAreDifferentConstantSearch.paragraph": "Constant search for solutions and innovations"
+            },
+
+            "whyWeAreDifferentQuickAdaptation": {
+                "whyWeAreDifferentQuickAdaptation.title": "We adapt",
+                "whyWeAreDifferentQuickAdaptation.paragraph": "Quickly responding to changes in the market"
+            },
+
+            "whyWeAreDifferentAdvancedKnowledge": {
+                "whyWeAreDifferentAdvancedKnowledge.title": "We have",
+                "whyWeAreDifferentAdvancedKnowledge.paragraph": "Advanced technical knowledge"
+            },
+
+            "whyWeAreDifferentDeliveringSolutions": {
+                "whyWeAreDifferentDeliveringSolutions.title": "We deliver",
+                "whyWeAreDifferentDeliveringSolutions.paragraph": "Solutions that meet your expectations"
+            }
+        }
+    },
+
+    "weAreBrazilians": {
+        "weAreBrazilians.paragraph": "We are Brazilians",
+        "weAreBrazilians.title": "Hiring a Brazilian company offers several advantages"
+    }
+ }
+

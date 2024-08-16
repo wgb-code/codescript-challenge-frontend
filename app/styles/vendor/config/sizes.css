@@ -1,8 +1,12 @@
 :root {
+    --title-lg: 5rem;
+    --title-md: 5vw;
+    --title-sm: 3.5rem;
     --title-fw: 700;
-    --title-lg: 4rem;
-    --title-md: 4.5vw;
-    --title-sm: 2.5vw;
+
+    --subtitle-lg: 4rem;
+    --subtitle-md: 4vw;
+    --subtitle-sm: 2.5vw;
 
     --paragraph-lg: 1.6rem;
     --paragraph-md: 5vw;
@@ -16,7 +20,6 @@
     --radius-lg: 0.5rem;
 
     --letter-spacing-title: -0.1rem;
-    --letter-spacing-subtitle: -.03em;
     --letter-spacing-paragraph: 0.01em;
 
     --line-height-title: 1.2;

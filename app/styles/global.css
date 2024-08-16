@@ -153,7 +153,6 @@ main .mainButtons #btnContact:hover {
 
 .bestFeatures {
    padding: 8rem min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
-   background-color: var(--off-white);
 }
 
 .bestFeatures .bestFeaturesDescription {
@@ -211,10 +210,6 @@ main .mainButtons #btnContact:hover {
    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
-.bestFeaturesContainerItems figure {
-   margin: 0;
-}
-
 .bestFeaturesContainerItems img {
    padding: 0.3rem;
    border-radius: 0.5rem;
@@ -231,6 +226,7 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
    letter-spacing: -.01em;
    line-height: 1.12;
+   text-align: left;
 }
 
 .bestFeaturesContainerItems p {
@@ -238,6 +234,7 @@ main .mainButtons #btnContact:hover {
    color: var(--gray-text);
    letter-spacing: .01em;
    line-height: 1.8;
+   text-align: left;
 }
 
 .aboutUs {
@@ -297,7 +294,7 @@ main .mainButtons #btnContact:hover {
    align-items: center;
    gap: 0.3rem;
    margin-top: 3rem;
-   padding: 1rem;
+   padding: 0.8rem 2rem;
    font-size: 1.4rem;
    font-weight: 700;
    line-height: 120%;
@@ -375,7 +372,7 @@ main .mainButtons #btnContact:hover {
 
 .whyWeAreDifferent .whyWeAreDifferentBoxItems .whyWeAreDifferentItems {
    padding: 3.2rem;
-   border: 0.1rem solid var(--gray-box);
+   background-color: var(--off-white);
    border-radius: 1.6rem;
    transition: box-shadow .15s ease-out;
 }
@@ -402,16 +399,16 @@ main .mainButtons #btnContact:hover {
    display: flex;
    justify-content: center;
    flex-direction: column;
+   background-color: var(--primary-dark);
    align-items: center;
-   margin-bottom: 8rem;
 }
 
 .weAreBrazilians .weAreBraziliansDescription p {
-   margin-block-end: 1.6rem;
+   margin-top: 8rem;
    font-family: 'Inter', sans-serif;
    font-size: 1.6rem;
    font-weight: 600;
-   color: var(--primary-dark);
+   color: var(--off-white);
    text-align: center;
 }
 
@@ -427,12 +424,19 @@ main .mainButtons #btnContact:hover {
    font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
    line-height: var(--line-height-title);
    letter-spacing: var(--letter-spacing-title);
-   color: var(--primary-dark);
+   color: var(--off-white);
    margin-bottom: 1.6rem;
    text-align: center;
 }
 
-.weAreBrazilians .weAreBraziliansDescription button {
+.weAreBrazilians a {
+   margin-top: 8rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.weAreBrazilians button {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -440,8 +444,8 @@ main .mainButtons #btnContact:hover {
    font-size: 1.4rem;
    font-weight: 700;
    line-height: 120%;
-   color: var(--blue-destach);
-   border: 0.1rem solid var(--blue-destach);
+   color: var(--off-white);
+   border: 0.1rem solid var(--off-white);
    padding: 0.8rem 2rem;
    border-radius: 0.5rem;
    cursor: pointer;
@@ -449,7 +453,7 @@ main .mainButtons #btnContact:hover {
    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.weAreBrazilians .weAreBraziliansDescription button:hover {
+.weAreBrazilians button:hover {
    transform: translateY(-2px);
 }
 
@@ -486,189 +490,185 @@ main .mainButtons #btnContact:hover {
 }
 
 .labProjects {
+   padding: 0 min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
+}
+
+.labProjects,
+.labProjectsItems {
    display: flex;
+   align-items: center;
    flex-direction: column;
-   justify-content: center;
-   padding: 8rem min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
-   padding-bottom: 0;
+   margin-top: 8rem;
 }
 
-.labProjects .labProjectsDescription {
-   text-align: center;
-   margin-bottom: 4rem;
+.labProjectsItems>p {
+   width: 100%;
+   max-width: 124.1rem;
 }
 
-.labProjects .labProjectsDescription p {
-   margin-block-end: 1.6rem;
-   font-family: Inter, sans-serif;
-   font-size: 1.6rem;
-   font-weight: 600;
+.labProjectsDescription p {
+   margin-bottom: var(--paragraph-mb);
+   font-family: 'Inter', sans-serif;
+   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
+   font-weight: 500;
    color: var(--primary-dark);
    text-align: center;
 }
 
-.labProjects .labProjectsDescription p b {
+.labProjectsDescription p b {
    color: transparent;
    background: linear-gradient(90deg, #5530ff, var(--secondary-text));
    background-clip: text;
    -webkit-background-clip: text;
 }
 
-.labProjects .labProjectsDescription h4 {
+.labProjectsDescription h4 {
    font-weight: 700;
-   font-size: 4rem;
-   line-height: 1.12;
    letter-spacing: -.03em;
    color: var(--primary-dark);
-   margin-block-end: 1.6rem;
    text-align: center;
+   font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
+   line-height: var(--line-height-subtitle);
 }
 
-.labProjectsItems {
-   display: flex;
-   flex-direction: column;
-}
-
-#labProjectsItems {
-   display: flex;
-   flex-direction: column;
-   overflow: hidden;
-   margin-top: 8rem;
-   height: 0;
-   opacity: 0;
-   transition: height 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-#labProjectsItems.expanded {
-   height: auto;
-   opacity: 1;
-}
-
-.labProjectsItems>h5,
-.labProjectsMainItems h5,
-.labProjectsInfos h5 {
-   margin-bottom: 2rem;
+.labProjectsItems>h4,
+.labProjectsItems h5 {
    font-family: 'Inter', sans-serif;
    font-size: 2rem;
    text-align: center;
+   margin-bottom: 2rem;
    color: var(--primary-dark);
 }
 
-.labProjectsItems>p {
+.labProjectsItems p {
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
-   color: var(--gray-text);
+   font-weight: 500;
+   line-height: var(--line-height-paragraph);
    letter-spacing: var(--letter-spacing-paragraph);
-   line-height: 1.5;
+   color: var(--gray-text);
    text-align: center;
-   margin-bottom: 2rem;
+   margin-bottom: 3rem;
 }
 
 .gridLabProjectsItems {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   margin-top: 8rem;
-   align-items: start;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   gap: 1.5rem;
 }
 
-.labProjectsMainItems {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 2rem;
-   justify-self: start;
+.gridLabProjectsItems .labProjectsMainItems {
+   grid-column: 1 / -1;
 }
 
-.labProjectsInfos {
+.gridLabProjectsItems .labProjectsInfos {
+   grid-column: 1 / 2;
+}
+
+.gridLabProjectsItems .labProjectsComposition {
+   grid-column: 2 / 3;
+}
+
+.gridLabProjectsItems {
+   grid-template-columns: 65% 35%;
+   width: 100%;
+   max-width: 132.9rem;
+}
+
+.gridLabProjectsItems .labProjectsMainItems,
+.gridLabProjectsItems .labProjectsInfos,
+.gridLabProjectsItems .labProjectsComposition {
    display: flex;
    flex-direction: column;
+   padding: 3rem;
+   border: none;
+   background-color: var(--off-white);
+   border-radius: 1.6rem;
+   transition: box-shadow 0.15s ease-out 0s;
+}
+
+.gridLabProjectsItems .labProjectsMainItems:hover,
+.gridLabProjectsItems .labProjectsInfos:hover,
+.gridLabProjectsItems .labProjectsComposition:hover {
+   box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, .1), 0 0.2rem 4px rgba(0, 0, 0, .06);
+}
+
+.gridLabProjectsItems .labProjectsMainItems ul {
+   padding: 0 20rem;
+}
+
+.gridLabProjectsItems .labProjectsComposition {
+   padding: 2rem;
+}
+
+.gridLabProjectsItems .labProjectsComposition {
+   justify-content: center;
    align-items: center;
-   gap: 2rem;
-   justify-self: center;
 }
 
-.labProjectsInfos ul li {
+.gridLabProjectsItems .labProjectsMainItems h6,
+.gridLabProjectsItems .labProjectsMainItems p,
+.gridLabProjectsItems .labProjectsInfos h6,
+.gridLabProjectsItems .labProjectsInfos p,
+.gridLabProjectsItems .labProjectsComposition p {
+   text-align: left;
+   color: var(--gray-text);
+}
+
+.gridLabProjectsItems .labProjectsComposition p {
+   text-align: justify;
+}
+
+.gridLabProjectsItems .labProjectsComposition p b {
+   color: var(--secondary-text);
+}
+
+.gridLabProjectsItems .labProjectsMainItems h6 {
+   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
+   line-height: var(--line-height-paragraph);
+   letter-spacing: var(--letter-spacing-paragraph);
+   color: var(--secondary-text);
+}
+
+.gridLabProjectsItems .labProjectsInfos h6 {
+   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
+   line-height: var(--line-height-paragraph);
+   letter-spacing: var(--letter-spacing-paragraph);
+   color: var(--secondary-text);
+}
+
+.gridLabProjectsItems .labProjectsInfos ul {
    display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: flex-start;
+   justify-content: space-between;
+}
+
+.gridLabProjectsItems .labProjectsInfos ul li .labProjectsInfosFlex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    gap: 0.5rem;
 }
 
-.labProjectsMainItems ul li h6,
-.labProjectsInfos ul li h6 {
-   font-family: 'Inter', sans-serif;
-   font-size: 1.6rem;
-   font-weight: 600;
-   color: transparent;
-   background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-   background-clip: text;
-   -webkit-background-clip: text;
-}
-
-.labProjectsMainItems ul li p,
-.labProjectsInfos ul li .labProjectsInfosFlex p {
-   font-size: 1.6rem;
-   color: var(--gray-text);
-   letter-spacing: .01em;
-   line-height: 1.5;
-   margin-bottom: 2rem;
-}
-
-.labProjectsInfos ul li .labProjectsInfosFlex {
-   display: flex;
-   gap: 0.5rem;
-}
-
-.labProjectsComposition {
-   display: flex;
-   flex-direction: column;
-   align-items: end;
-   gap: 2rem;
-   justify-self: end;
-}
-
-.labProjectsComposition h6 {
-   margin-bottom: 2rem;
-   font-family: 'Inter', sans-serif;
-   font-size: 2rem;
-   text-align: center;
-   color: var(--primary-dark);
-}
-
-.labProjectsComposition ul li {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   align-items: flex-end;
-   text-align: end;
-}
-
-.labProjectsComposition ul li p {
-   font-size: 1.6rem;
-   color: var(--gray-text);
-   letter-spacing: .01em;
-   line-height: 1.5;
-   margin-bottom: 2rem;
-}
-
-.labProjectsComposition ul li p b {
-   font-family: 'Inter', sans-serif;
-   font-size: 1.6rem;
-   font-weight: 600;
-   color: transparent;
-   background: linear-gradient(90deg, #5530ff, var(--secondary-text));
-   background-clip: text;
-   -webkit-background-clip: text;
-}
-
-.labProjectsComposition ul li p b {
-   color: var(--primary-dark);
+.gridLabProjectsItems .labProjectsInfos ul li .labProjectsInfosFlex p,
+.gridLabProjectsItems .labProjectsComposition p {
+   margin: 0;
 }
 
 .expandLabProjectsItems {
    display: flex;
    justify-content: center;
-   padding-bottom: 8rem;
+   padding: 4rem;
+}
+
+#labProjectsItems {
+   display: none;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+#labProjectsItems.expanded {
+   display: block;
+   opacity: 1;
 }
 
 .expandLabProjectsItems #labProjectsItemsExpand {
@@ -811,5 +811,12 @@ main .mainButtons #btnContact:hover {
       height: auto;
       min-width: 7rem;
       max-width: 8rem;
+   }
+}
+
+@media screen and (max-width: 880px) {
+   .bestFeaturesItems {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
    }
 }
