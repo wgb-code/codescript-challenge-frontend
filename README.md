@@ -114,3 +114,5 @@ Foi levado em consideração os seguintes critérios para decidir o layout da ap
   - **10-08-2024 até 12-08-2024** - Desenvolvimento da home page.
   - **13-08-2024** - Limpeza do Código e ajustes finos na estrutura.
   - **14-08-2024** - Inciado a padronização do CSS e responsividade.
+  --**15-08-2024** - Estruturado o projeto para receber os pacotes de Traduções.
+  --**16-08-2024** - Finalizado a responsividade do index.
