@@ -72,7 +72,6 @@ main .mainButtons #btnContact:hover {
 }
 
 #partnerCompanies p {
-   margin-bottom: var(--paragraph-mb);
    font-family: 'Inter', sans-serif;
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    font-weight: 500;
@@ -95,23 +94,6 @@ main .mainButtons #btnContact:hover {
    text-align: center;
    font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
    line-height: var(--line-height-title);
-}
-
-#partnerCompanies .logosCompanies {
-   display: flex;
-   justify-content: center;
-   margin: 8rem 10rem;
-   white-space: nowrap;
-   position: relative;
-}
-
-#partnerCompanies .logosCompanies .logosSlide {
-   display: flex;
-   gap: 3rem;
-}
-
-#partnerCompanies .logosCompanies .logosSlide img {
-   height: 3.2rem;
 }
 
 #partnerCompanies .partnerCompaniesDescription {
@@ -157,7 +139,6 @@ main .mainButtons #btnContact:hover {
 
 .bestFeatures .bestFeaturesDescription {
    display: flex;
-   margin: 8rem 0;
    flex-direction: column;
    text-align: center;
    gap: 0.5rem;
@@ -188,14 +169,15 @@ main .mainButtons #btnContact:hover {
    text-align: center;
    font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
    line-height: var(--line-height-subtitle);
+   margin-bottom: 8rem;
 }
 
 .bestFeaturesItems {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(2, auto);
-   column-gap: 5rem;
-   row-gap: 4rem;
+   column-gap: 3rem;
+   row-gap: 2rem;
 }
 
 .bestFeaturesContainerItems {
@@ -404,6 +386,7 @@ main .mainButtons #btnContact:hover {
 }
 
 .weAreBrazilians .weAreBraziliansDescription p {
+   margin-bottom: var(--paragraph-mb);
    margin-top: 8rem;
    font-family: 'Inter', sans-serif;
    font-size: 1.6rem;
@@ -430,7 +413,7 @@ main .mainButtons #btnContact:hover {
 }
 
 .weAreBrazilians a {
-   margin-top: 8rem;
+   margin-top: 4rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -461,7 +444,7 @@ main .mainButtons #btnContact:hover {
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
-   padding: 8rem min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
+   padding: 4rem min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
    background-color: var(--primary-dark);
 }
 
@@ -487,6 +470,8 @@ main .mainButtons #btnContact:hover {
    line-height: 1.5;
    text-align: center;
    margin-bottom: 2rem;
+   width: 100%;
+   max-width: 75rem;
 }
 
 .labProjects {
@@ -499,11 +484,12 @@ main .mainButtons #btnContact:hover {
    align-items: center;
    flex-direction: column;
    margin-top: 8rem;
+   width: 100%;
 }
 
-.labProjectsItems>p {
-   width: 100%;
-   max-width: 124.1rem;
+.labProjectsItems > p {
+   margin: 0 auto;
+   max-width: 120rem;
 }
 
 .labProjectsDescription p {
@@ -572,7 +558,8 @@ main .mainButtons #btnContact:hover {
 .gridLabProjectsItems {
    grid-template-columns: 65% 35%;
    width: 100%;
-   max-width: 132.9rem;
+   margin: 0 auto;
+   gap: 1.5rem;
 }
 
 .gridLabProjectsItems .labProjectsMainItems,
@@ -783,4 +770,243 @@ main .mainButtons #btnContact:hover {
    height: 8rem;
    object-fit: contain;
    flex-shrink: 0;
+}
+
+@media screen and (max-width: 1250px) {
+   .aboutUs {
+      flex-direction: column-reverse;
+   }
+
+   .aboutUs .aboutUsDescription {
+      margin-top: 6rem;
+   }
+
+   .aboutUs .aboutUsDescription p,
+   .aboutUs .aboutUsDescription h5 {
+      text-align: justify;
+   }
+
+   .labProjectsItems p {
+      text-align: center;
+   }
+
+   .ourTechnologies .ourTechnologiesLogos ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .ourTechnologies .ourTechnologiesLogos ul li img {
+      width: 60%;
+      height: auto;
+      min-width: 7rem;
+      max-width: 8rem;
+   }
+
+   .gridLabProjectsItems {
+      grid-template-columns: 1fr;
+   }
+
+   .gridLabProjectsItems .labProjectsMainItems,
+   .gridLabProjectsItems .labProjectsInfos,
+   .gridLabProjectsItems .labProjectsComposition {
+      grid-column: 1 / -1;
+   }
+}
+
+@media screen and (max-width: 1030px) {
+   .aboutUs .aboutUsDescription h4 {
+      font-size: 2.5rem;
+   }
+
+   .bestFeaturesItems {
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      grid-template-rows: repeat(2, auto);
+      column-gap: 5rem;
+      row-gap: 4rem;
+  }
+
+  .gridLabProjectsItems .labProjectsMainItems ul {
+      padding: 0 2rem;
+  }
+
+   .whyWeAreDifferent .whyWeAreDifferentBoxItems {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width: 730px){
+   main h1,
+   .bestFeatures .bestFeaturesDescription h3,
+   .whyWeAreDifferent .whyWeAreDifferentDescription h4,
+   .weAreBrazilians .weAreBraziliansDescription h4,
+   .labProjectsDescription h4,
+   .moreInfo h4,
+   .ourTechnologies .ourTechnologiesDescription h4 {
+      font-size: 2.4rem;
+      width: 100%;
+      max-width: 60rem;
+      margin: 0 auto;
+   }
+
+   main p,
+   .bestFeatures .bestFeaturesDescription p ,
+   .aboutUs .aboutUsDescription p,
+   .whyWeAreDifferent .whyWeAreDifferentDescription p,
+   .weAreBrazilians .weAreBraziliansDescription p,
+   .moreInfo p,
+   .ourTechnologies .ourTechnologiesDescription p {
+      font-size: 1.6rem;
+      line-height: 1.2;
+   }
+
+   .bestFeatures .bestFeaturesDescription p,
+   .aboutUs .aboutUsDescription p,
+   .whyWeAreDifferent .whyWeAreDifferentDescription p,
+   .weAreBrazilians .weAreBraziliansDescription p,
+   .labProjectsDescription p,
+   .labProjectsDescription p,
+   .moreInfo p,
+   .ourTechnologies .ourTechnologiesDescription p {
+      margin-bottom: 0.5rem;
+   }
+
+   #partnerCompanies .partnerCompaniesDescription p,
+   .aboutUs .aboutUsDescription h5 {
+      font-size: 1.6rem;
+   }
+
+   .bestFeaturesItems {
+      column-gap: 1.5rem;
+      row-gap: 1.5rem;
+   }
+
+   .whyWeAreDifferent .whyWeAreDifferentBoxItems {
+      gap: 1rem;
+   }
+
+   .weAreBraziliansItems .weAreBraziliansItem {
+      align-items: start;
+   }
+
+   .weAreBraziliansItems .weAreBraziliansItem h4 {
+      text-align: justify;
+   }
+
+   .weAreBrazilians .weAreBraziliansDescription p,
+   .labProjects, .labProjectsItems {
+      margin-top: 4rem;
+   }
+
+   .bestFeatures .bestFeaturesDescription h3,
+   .whyWeAreDifferent .whyWeAreDifferentDescription h4,
+   .ourTechnologies .ourTechnologiesDescription h4,
+   .moreInfo h4 {
+      margin-bottom: 4rem;
+   }
+
+   .bestFeatures,
+   .aboutUs,
+   .weAreBraziliansItems,
+   .whyWeAreDifferent,
+   .ourTechnologies,
+   .moreInfo {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+   }
+
+   .aboutUs .aboutUsDescription h5,
+   .weAreBrazilians .weAreBraziliansDescription h4 {
+      margin: 0;
+   }
+
+   .weAreBrazilians a {
+      margin-top: 2rem;
+   }
+
+   .labProjectsItems > p {
+      max-width: 60rem;
+   }
+
+   .gridLabProjectsItems .labProjectsInfos ul {
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .gridLabProjectsItems .labProjectsInfos ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+   }
+}
+
+@media screen and (max-width: 426px) {
+   main h1,
+   .bestFeatures .bestFeaturesDescription h3,
+   .whyWeAreDifferent .whyWeAreDifferentDescription h4,
+   .weAreBrazilians .weAreBraziliansDescription h4,
+   .labProjectsDescription h4,
+   .moreInfo h4,
+   .ourTechnologies .ourTechnologiesDescription h4 {
+      font-size: 2.2rem;
+   }
+
+   main p,
+   .bestFeatures .bestFeaturesDescription p ,
+   .aboutUs .aboutUsDescription p,
+   .whyWeAreDifferent .whyWeAreDifferentDescription p,
+   .weAreBrazilians .weAreBraziliansDescription p,
+   .moreInfo p,
+   .ourTechnologies .ourTechnologiesDescription p,
+   #partnerCompanies .partnerCompaniesDescription p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+   }
+
+   .bestFeatures .bestFeaturesDescription p,
+   .aboutUs .aboutUsDescription p,
+   .whyWeAreDifferent .whyWeAreDifferentDescription p,
+   .weAreBrazilians .weAreBraziliansDescription p,
+   .labProjectsDescription p,
+   .labProjectsDescription p,
+   .moreInfo p,
+   .ourTechnologies .ourTechnologiesDescription p,
+   #partnerCompanies .partnerCompaniesDescription p {
+      margin-bottom: 0.5rem;
+   }
+
+   main h1 br,
+   main p br, .partnerCompaniesDescription p br{
+      display: none;
+   }
+
+   main .mainButtons {
+      flex-direction: column;
+      margin-top: 5rem;
+   }
+
+   .bestFeaturesItems,
+   .whyWeAreDifferent .whyWeAreDifferentBoxItems {
+      margin-top: 4rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+   }
+
+   .bestFeatures .bestFeaturesDescription h3 {
+      margin-bottom: 0;
+   }
+
+   .gridLabProjectsItems .labProjectsInfos ul {
+      gap: 1rem;
+   }
+
+   .gridLabProjectsItems .labProjectsInfos ul li{
+      flex-direction: column;
+   }
+
+   .gridLabProjectsItems .labProjectsComposition ul li p{
+      font-size: 1.4rem;
+   }
 }
