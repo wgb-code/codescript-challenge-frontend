@@ -626,7 +626,9 @@ main .mainButtons #btnContact:hover {
 
 .gridLabProjectsItems .labProjectsInfos ul {
    display: flex;
-   justify-content: space-between;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
 }
 
 .gridLabProjectsItems .labProjectsInfos ul li .labProjectsInfosFlex {
@@ -928,18 +930,6 @@ main .mainButtons #btnContact:hover {
    .labProjectsItems > p {
       max-width: 60rem;
    }
-
-   .gridLabProjectsItems .labProjectsInfos ul {
-      flex-direction: column;
-      gap: 0.5rem;
-   }
-
-   .gridLabProjectsItems .labProjectsInfos ul li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-   }
 }
 
 @media screen and (max-width: 426px) {
@@ -996,10 +986,6 @@ main .mainButtons #btnContact:hover {
 
    .bestFeatures .bestFeaturesDescription h3 {
       margin-bottom: 0;
-   }
-
-   .gridLabProjectsItems .labProjectsInfos ul {
-      gap: 1rem;
    }
 
    .gridLabProjectsItems .labProjectsInfos ul li{
