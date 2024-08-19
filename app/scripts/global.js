@@ -1,4 +1,5 @@
 import { navTemplate, openNavbar } from '../pages/nav/nav.js';
+import { footerTemplate } from '../pages/footer/footer.js';
 
 function expandedLabProjects() {
 
@@ -16,6 +17,7 @@ function expandedLabProjects() {
 }
 
 navTemplate();
+footerTemplate();
 
 window.openNavbar = openNavbar;
 window.expandedLabProjects = expandedLabProjects;

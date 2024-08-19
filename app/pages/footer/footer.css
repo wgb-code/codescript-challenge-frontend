@@ -1,0 +1,19 @@
+footer {
+    padding: 4rem 10rem ;
+    background-color: var(--primary-dark);
+}
+
+footer .link-content {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-social-medias ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer .footer-social-medias ul li {
+    border: 1px solid wheat;
+}
