@@ -680,21 +680,21 @@ main .mainButtons #btnContact:hover {
 }
 
 .gridLabProjectsItems .labProjectsComposition p b {
-   color: var(--secondary-text);
+   color: var(--primary-dark);
 }
 
 .gridLabProjectsItems .labProjectsMainItems h6 {
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    line-height: var(--line-height-paragraph);
    letter-spacing: var(--letter-spacing-paragraph);
-   color: var(--secondary-text);
+   color: var(--primary-dark);
 }
 
 .gridLabProjectsItems .labProjectsInfos h6 {
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    line-height: var(--line-height-paragraph);
    letter-spacing: var(--letter-spacing-paragraph);
-   color: var(--secondary-text);
+   color: var(--primary-dark);
 }
 
 .gridLabProjectsItems .labProjectsInfos ul {

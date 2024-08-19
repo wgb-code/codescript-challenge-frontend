@@ -16,17 +16,14 @@ export async function navTemplate() {
     } catch (error) {
         console.error('Erro ao carregar navbar:', error);
     }
-
 }
 
-export function openNavbar() {
-    let getButton = document.getElementById('open-nav');
-    let getNavLinks = document.getElementById('nav-links');
+export function openServiceList() {
+    let listService = document.getElementById('listService');
 
-    if (getNavLinks.classList.contains('show')) {
-        getNavLinks.classList.remove('show');
-
+    if (!listService.classList.contains('active')) {
+        listService.classList.add('active');
     } else {
-        getNavLinks.classList.add('show');
+        listService.classList.remove('active');
     }
 }

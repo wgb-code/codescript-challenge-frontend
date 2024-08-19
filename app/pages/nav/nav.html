@@ -1,7 +1,6 @@
 <nav aria-label="Main Navigation">
-    <a href="#">
-        <img src="/app/assets/imgs/logo/codescript.webp" width="180" height="43" alt="Logo da empresa CodeScript Technology" title="Voltar para tela inicial">
-    </a>
+    <img src="/app/assets/imgs/logo/codescript.webp" width="180" height="43" alt="Logo da empresa CodeScript Technology" title="Voltar para tela inicial">
+
     <ul id="nav-links">
         <li title="Início">
             <a href="#">
@@ -14,14 +13,11 @@
             </a>
         </li>
         <li class="nav-service" title="Abrir menu de serviços">
-            <input type="checkbox" id="service-toggle" hidden>
-            <label for="service-toggle">
-                <span>
-                    Serviços
-                </span>
-                <img src="/app/assets/svgs/icons/arrow.svg" width="18" height="18" alt="Ícone de flecha para baixo" title="Expandir lista de Serviços">
-            </label>
-            <ul>
+            <button onclick="openServiceList()">
+                Serviços
+                <img src="/app/assets/svgs/icons/arrow.svg" alt="Ícone de flecha para baixo" width="18" height="18">
+            </button>
+            <ul id="listService">
                 <li title="Sáude">
                     <a href="#">
                         Saúde
@@ -49,8 +45,10 @@
                 Contato
             </a>
         </li>
-        <button id="open-nav" title="Abrir Menu" onclick="openNavbar()">
-            <img src="/app/assets/svgs/icons/menu.svg" width="35" height="35" alt="Ícone de abertura de menu" title="Expandir Menu">
-        </button>
+        <li class="nav-settings" title="Abrir menu de configurações">
+            <button>
+                <img src="/app/assets/svgs/icons/settings.svg" alt="Ícone de engrenagem" width="18" height="18">
+            </button>
+        </li>
     </ul>
 </nav>

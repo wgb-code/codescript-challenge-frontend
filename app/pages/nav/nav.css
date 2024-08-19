@@ -34,92 +34,48 @@ nav ul li:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+nav ul .nav-service {
+    position: relative;
+}
+
+nav ul .nav-service button,
 nav ul li a {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--primary-dark);
 }
 
-nav ul .nav-service {
-    display: flex;
+nav ul .nav-service button{
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-}
-
-nav ul .nav-service input[type="checkbox"] {
-    display: none;
-}
-
-nav ul .nav-service label {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    cursor: pointer;
-    padding: 0 0.8rem;
-    white-space: nowrap;
-}
-
-nav ul .nav-service label span {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--primary-dark);
 }
 
 nav ul .nav-service ul {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    max-height: 0;
-    background-color: var(--off-white);
-    overflow: hidden;
-}
-
-
-nav ul .nav-service input[type="checkbox"]:checked+label+ul {
-    width: 20rem;
+    right: 10%;
+    margin-top: 0.5rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1rem;
-    max-height: 30rem;
-    transition: max-height 0.3s ease-out;
+    z-index: 10;
 }
 
 nav ul .nav-service ul li {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
+    white-space: nowrap;
 }
 
-nav ul .nav-service ul li a {
-    color: var(--primary-dark);
+nav ul .nav-service ul li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-#nav-links button {
-    display: none;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#nav-links button:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav #nav-links .show {
-    display: block;
-}
-
-@media screen and (max-width: 670px) {
-
-    nav ul li,
-    nav ul .nav-service {
-        display: none;
-    }
-
-    #nav-links #open-nav {
-        display: block;
-    }
+nav ul .nav-service ul.active {
+    display: flex;
 }
