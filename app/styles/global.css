@@ -436,7 +436,7 @@ main .mainButtons #btnContact:hover {
    box-shadow: 0 4px 8px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .06);
 }
 
-.whyWeAreDifferentItems .whyWeAreDifferentItemsText h5 {
+.whyWeAreDifferentItems .whyWeAreDifferentItemsText h6 {
    margin-top: 2.4rem;
    margin-bottom: 0.8rem;
    font-family: 'Inter', sans-serif;
@@ -549,17 +549,14 @@ main .mainButtons #btnContact:hover {
 
 .labProjects {
    padding: 0 min(max(var(--padding-sm), var(--padding-md)), var(--padding-lg));
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   margin-top: 8rem;
-   width: 100%;
 }
 
+.labProjects,
 .labProjectsItems {
    display: flex;
    align-items: center;
    flex-direction: column;
+   margin-top: 8rem;
    width: 100%;
 }
 
@@ -568,16 +565,13 @@ main .mainButtons #btnContact:hover {
    max-width: 120rem;
 }
 
-.labProjectsDescription p,
-.labProjectsItems p {
-   margin-bottom: var(--paragraph-mb, 3rem);
+.labProjectsDescription p {
+   margin-bottom: var(--paragraph-mb);
    font-family: 'Inter', sans-serif;
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    font-weight: 500;
-   color: var(--gray-text);
+   color: var(--primary-dark);
    text-align: center;
-   line-height: var(--line-height-paragraph);
-   letter-spacing: var(--letter-spacing-paragraph);
 }
 
 .labProjectsDescription p b {
@@ -587,35 +581,32 @@ main .mainButtons #btnContact:hover {
    -webkit-background-clip: text;
 }
 
-.labProjectsDescription h4,
-.labProjectsItems > h4,
-.labProjectsItems h5,
-.labProjectsMainItems h4,
-.labProjectsInfos h4,
-.labProjectsComposition h4 {
-   font-family: 'Inter', sans-serif;
+.labProjectsDescription h4 {
    font-weight: 700;
    letter-spacing: -.03em;
    color: var(--primary-dark);
    text-align: center;
-   font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg), 2rem);
+   font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
    line-height: var(--line-height-subtitle);
 }
 
-.labProjectsDescription h4 {
-   font-weight: 700;
-   font-size: min(max(var(--title-sm), var(--title-md)), var(--title-lg));
-   line-height: var(--line-height-title);
-   letter-spacing: var(--letter-spacing-title);
+.labProjectsItems>h4,
+.labProjectsItems h5 {
+   font-family: 'Inter', sans-serif;
+   font-size: 2rem;
+   text-align: center;
+   margin-bottom: 2rem;
    color: var(--primary-dark);
-   margin-bottom: 8rem;
 }
 
-.labProjectsItems > h4,
-.labProjectsMainItems > h4,
-.labProjectsInfos > h4,
-.labProjectsComposition > h4 {
-   margin-bottom: 1.4rem;
+.labProjectsItems p {
+   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
+   font-weight: 500;
+   line-height: var(--line-height-paragraph);
+   letter-spacing: var(--letter-spacing-paragraph);
+   color: var(--gray-text);
+   text-align: center;
+   margin-bottom: 3rem;
 }
 
 .gridLabProjectsItems {
@@ -675,9 +666,9 @@ main .mainButtons #btnContact:hover {
    align-items: center;
 }
 
-.gridLabProjectsItems .labProjectsMainItems h5,
+.gridLabProjectsItems .labProjectsMainItems h6,
 .gridLabProjectsItems .labProjectsMainItems p,
-.gridLabProjectsItems .labProjectsInfos h5,
+.gridLabProjectsItems .labProjectsInfos h6,
 .gridLabProjectsItems .labProjectsInfos p,
 .gridLabProjectsItems .labProjectsComposition p {
    text-align: left;
@@ -692,8 +683,14 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
 }
 
-.gridLabProjectsItems .labProjectsMainItems h5,
-.gridLabProjectsItems .labProjectsInfos h5 {
+.gridLabProjectsItems .labProjectsMainItems h6 {
+   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
+   line-height: var(--line-height-paragraph);
+   letter-spacing: var(--letter-spacing-paragraph);
+   color: var(--primary-dark);
+}
+
+.gridLabProjectsItems .labProjectsInfos h6 {
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    line-height: var(--line-height-paragraph);
    letter-spacing: var(--letter-spacing-paragraph);
@@ -711,7 +708,7 @@ main .mainButtons #btnContact:hover {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 0.rem;
+   gap: 0.5rem;
 }
 
 .gridLabProjectsItems .labProjectsInfos ul li .labProjectsInfosFlex p,
