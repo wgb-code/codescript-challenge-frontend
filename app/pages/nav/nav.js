@@ -20,10 +20,23 @@ export async function navTemplate() {
 
 export function openServiceList() {
     let listService = document.getElementById('listService');
+    let arrowIcon = document.getElementById('arrowIcon');
 
     if (!listService.classList.contains('active')) {
         listService.classList.add('active');
+        arrowIcon.src = 'app/assets/svgs/icons/arrow-up.svg';
     } else {
         listService.classList.remove('active');
+        arrowIcon.src = 'app/assets/svgs/icons/arrow.svg';
+    }
+}
+
+export function openMenuMobile() {
+    let mobileMenu = document.getElementById('nav-links');
+
+    if (!mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.add('active');
+    } else {
+        mobileMenu.classList.remove('active');
     }
 }

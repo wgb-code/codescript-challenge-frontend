@@ -683,14 +683,9 @@ main .mainButtons #btnContact:hover {
    color: var(--primary-dark);
 }
 
-.gridLabProjectsItems .labProjectsMainItems h6 {
-   font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
-   line-height: var(--line-height-paragraph);
-   letter-spacing: var(--letter-spacing-paragraph);
-   color: var(--primary-dark);
-}
-
+.gridLabProjectsItems .labProjectsMainItems h6,
 .gridLabProjectsItems .labProjectsInfos h6 {
+   font-family: 'Inter', sans-serif;
    font-size: clamp(var(--paragraph-sm), var(--paragraph-md), var(--paragraph-lg));
    line-height: var(--line-height-paragraph);
    letter-spacing: var(--letter-spacing-paragraph);

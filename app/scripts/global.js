@@ -1,4 +1,4 @@
-import { navTemplate, openServiceList } from '../pages/nav/nav.js';
+import { navTemplate, openServiceList, openMenuMobile } from '../pages/nav/nav.js';
 import { footerTemplate } from '../pages/footer/footer.js';
 
 function expandedLabProjects() {
@@ -20,4 +20,5 @@ navTemplate();
 footerTemplate();
 
 window.openServiceList     = openServiceList;
+window.openMenuMobile      = openMenuMobile;
 window.expandedLabProjects = expandedLabProjects;
