@@ -1,0 +1,167 @@
+@import url('/app/styles/vendor/config/import.css');
+
+hr {
+    margin: 8rem 0 4rem 0;
+    border: 0.1rem solid var(--blue-destach);
+}
+
+.container-contact {
+    padding: 8rem 10rem 0 10rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 10rem 0 10rem;
+    gap: 1rem;
+}
+
+main {
+    align-items: center;
+}
+
+main .locationContact {
+    color: var(--primary-dark);
+}
+
+main .locationContact b {
+    color: var(--blue-destach);
+}
+
+main h1 {
+    font-size: 4rem;
+    letter-spacing: var(--letter-spacing-title);
+    line-height: var(--line-height-title);
+    color: transparent;
+    background: linear-gradient(90deg, var(--blue-destach), var(--secondary-text));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+main .locationParagraph,
+main p,
+.formContact form label,
+.formContact form input {
+    font-size: 1.6rem;
+    letter-spacing: var(--letter-spacing-paragraph);
+    line-height: var(--line-height-paragraph);
+    font-weight: 500;
+}
+
+.formContact,
+.infoContact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+}
+
+.formContact h2,
+.infoContact h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+.infoContact h2 {
+    margin-bottom: 4rem;
+}
+
+.formContact form,
+.formContact form .flexForm .nameForm,
+.formContact form .flexForm .phoneForm {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.formContact form .flexForm {
+    display: flex;
+    gap: 1rem;
+}
+
+.formContact form label {
+    margin-bottom: 0.6rem;
+}
+
+.formContact form input,
+.formContact form textarea {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(66, 80, 102, 0.4);
+}
+
+.formContact form input {
+    margin-bottom: 1rem;
+}
+
+.formContact form input:focus,
+.formContact form textarea:focus {
+    border-color: var(--blue-destach);
+    box-shadow: 0 0 0.5rem rgba(66, 80, 102, 0.4);
+    outline: none;
+}
+
+.formContact form input:active,
+.formContact form textarea:active {
+    border-color: var(--blue-destach);
+    box-shadow: 0 0 0.5rem rgba(66, 80, 102, 0.6);
+}
+
+.formContact form textarea {
+    height: 14rem;
+    max-height: 14rem;
+    margin-bottom: 2rem;
+    resize: none;
+}
+
+.formContact form button {
+    border: none;
+    background-color: var(--primary-dark);
+    color: var(--off-white);
+    padding: var(--padding-btn);
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.formContact form button:hover {
+    transform: translateY(-0.2rem);
+}
+
+.infoContact ul {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 16rem;
+}
+
+.infoContact ul li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.infoContact ul li .boxImage {
+    padding: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--blue-destach), var(--secondary-text));
+}
+
+.infoContact ul li p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--blue-destach);
+    letter-spacing: var(--letter-spacing-paragraph);
+    line-height: var(--line-height-paragraph);
+}

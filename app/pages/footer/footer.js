@@ -1,6 +1,6 @@
 export async function footerTemplate() {
     try {
-        let response = await fetch('app/pages/footer/footer.html');
+        let response = await fetch('/app/pages/footer/footer.html');
 
         if (!response.ok) {
             throw new Error(

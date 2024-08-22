@@ -1,7 +1,7 @@
 export async function navTemplate() {
 
     try {
-        let response = await fetch('app/pages/nav/nav.html');
+        let response = await fetch('/app/pages/nav/nav.html');
 
         if (!response.ok) {
             throw new Error(
@@ -24,10 +24,10 @@ export function openServiceList() {
 
     if (!listService.classList.contains('active')) {
         listService.classList.add('active');
-        arrowIcon.src = 'app/assets/svgs/icons/arrow-up.svg';
+        arrowIcon.src = '/app/assets/svgs/icons/arrow-up.svg';
     } else {
         listService.classList.remove('active');
-        arrowIcon.src = 'app/assets/svgs/icons/arrow.svg';
+        arrowIcon.src = '/app/assets/svgs/icons/arrow.svg';
     }
 }
 
