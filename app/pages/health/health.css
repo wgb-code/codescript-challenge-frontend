@@ -8,7 +8,7 @@ hr {
     border-color: var(--blue-destach);
 }
 
-.container-about {
+.container-health {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -103,7 +103,8 @@ main p,
 
 .cardsInfos h3,
 .innovativeSectionFor h3,
-.trustByDescription h4 {
+.trustByDescription h4,
+.innovativeSection h3 {
     text-align: center;
     font-size: 4rem;
     font-family: 'Inter', sans-serif;
@@ -471,7 +472,8 @@ main p,
 @media screen and (max-width: 440px) {
     main,
     .innovativeSection,
-    .trustBy {
+    .trustBy,
+    .sub-container {
         padding-left: 3rem;
         padding-right: 3rem;
     }

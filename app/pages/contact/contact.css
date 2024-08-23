@@ -48,6 +48,10 @@ main p,
     font-weight: 500;
 }
 
+main p {
+    text-align: center;
+}
+
 .formContact,
 .infoContact {
     display: flex;
@@ -164,4 +168,110 @@ main p,
     color: var(--blue-destach);
     letter-spacing: var(--letter-spacing-paragraph);
     line-height: var(--line-height-paragraph);
+}
+
+.formContact form .g-recaptcha {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    visibility:visible;
+    min-width: 25rem;
+    background-color: var(--blue-destach);
+    color: var(--off-white);
+    text-align: center;
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    top: 10rem;
+    right: 5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toast.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1250px) {
+    .infoContact ul {
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 16rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    main {
+        padding: 4rem 0;
+    }
+
+    .container-contact {
+        padding: 4rem;
+    }
+
+    hr,
+    .infoContact {
+        margin: 4rem 0;
+    }
+
+    .infoContact {
+        margin-bottom: 0;
+    }
+
+    .formContact form .flexForm {
+        flex-direction: column;
+    }
+
+    .infoContact ul {
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        padding-bottom: 2rem;
+    }
+
+    .formContact {
+        margin-top: 4rem;
+    }
+
+    main h1,
+    .formContact h2, .infoContact h2 {
+        font-size: 2.5rem;
+    }
+
+    main p,
+    .formContact form label,
+    .formContact form input {
+        font-size: 1.4rem;
+    }
+
+    .infoContact ul li {
+        flex-direction: column;
+    }
+
+    .infoContact ul li p {
+        text-align: center;
+    }
+
+    .g-recaptcha {
+        transform:scale(0.77);
+        transform-origin:0 0;
+    }
 }

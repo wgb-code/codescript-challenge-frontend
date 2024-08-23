@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/app/pages/nav/nav.css">
     <link rel="stylesheet" href="/app/pages/footer/footer.css">
     <title>Codescript: Contatos</title>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -39,7 +41,7 @@
         <section class="formContact">
             <h2>Envie-nos um Email</h2>
 
-            <form action="#" method="post">
+            <form>
                 <div class="flexForm">
                     <article class="nameForm">
                         <label for="name">Nome</label>
@@ -48,7 +50,7 @@
 
                     <article class="phoneForm">
                         <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Telefone">
+                        <input type="tel" id="phone" name="phone" placeholder="Telefone">
                     </article>
                 </div>
 
@@ -58,7 +60,9 @@
                 <label for="message">Mensagem</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <div class="g-recaptcha" data-sitekey="6Ld_xywqAAAAAHnLrd2J0yIGO5IV6Rh6Rm1311wp"></div>
+
+                <button type="submit" id="submit-button">Enviar</button>
             </form>
         </section>
         <hr>
@@ -69,7 +73,7 @@
             <ul>
                 <li>
                     <div class="boxImage">
-                        <img src="/app/assets/svgs/icons/phone.svg" alt="Ícone de Telefone">
+                        <img src="/app/assets/svgs/icons/phone.svg" alt="Ícone de Telefone" width="20" height="20">
                     </div>
                     <p>
                         +55 (54) 9 9966-0470<br>
@@ -96,7 +100,10 @@
             </ul>
         </section>
     </div>
-
+    <aside id="toast" class="toast hidden">
+        <img src="/app/assets/svgs/icons/mail-check.svg" alt="Ícone de Verificado" width="20" height="20">
+        Mensagem enviada com sucesso.
+    </aside>
     <div id="footer-container"></div>
     <script type="module" defer src="contact.js"></script>
 </body>
