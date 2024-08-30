@@ -1,17 +1,15 @@
 nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     box-sizing: border-box;
-    padding: 1.6rem 3.2rem;
+    padding: 1.5rem 10rem;
     line-height: 2rem;
     background-color: var(--primary-dark);
     user-select: none;
-    margin: 0;
-    -webkit-box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
-    -moz-box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
-    box-shadow: 0px 1px 0px 1px rgba(238, 238, 238, 1);
 }
 
 nav ul {
@@ -39,7 +37,7 @@ nav ul .nav-service {
 nav ul .nav-service button,
 nav ul li a {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--off-white);
 }
 
@@ -135,6 +133,45 @@ nav ul .nav-service ul.active li p {
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 700px) {
+nav.scroll {
+    background-color: var(--blue-destach);
+    padding: 1.5rem 10rem;
+}
 
+@media (max-width: 850px) {
+    nav {
+        padding: 2rem 4rem;
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: var(--primary-dark);
+        padding: 2rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        overflow-y: auto;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #btnShowMenu {
+        display: block;
+    }
+
+    .nav-service ul.active {
+        height: 25vh;
+        overflow: hidden;
+        box-shadow: none;
+    }
 }

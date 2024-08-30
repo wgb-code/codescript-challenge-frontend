@@ -33,10 +33,13 @@ export function openServiceList() {
 
 export function openMenuMobile() {
     let mobileMenu = document.getElementById('nav-links');
+    let menuIcon = document.getElementById('btnShowMenu').querySelector('img');
 
     if (!mobileMenu.classList.contains('active')) {
         mobileMenu.classList.add('active');
+        menuIcon.src = '/app/assets/svgs/icons/close.svg';
     } else {
         mobileMenu.classList.remove('active');
+        menuIcon.src = '/app/assets/svgs/icons/menu.svg';
     }
 }
