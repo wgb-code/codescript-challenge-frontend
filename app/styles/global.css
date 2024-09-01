@@ -5,7 +5,7 @@ main {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   color: light-dark(var(--primary-dark), var(--off-white));
+   color: var(--primary-dark);
    height: calc(100vh + 7.3rem);
 }
 
@@ -60,7 +60,7 @@ main button {
    background: linear-gradient(135deg, #0285F4, #52A8F2);;
    font-size: var(--fontsize-btn);
    font-weight: 900;
-   color: var(--off-white);
+   color: #FFFFFF;
    border-radius: var(--radius-lg);
    border: none;
    margin-top: 5rem;
@@ -79,7 +79,7 @@ main button:hover {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: light-dark(var(--secondary-text), #1f2a40);
+   background-color: var(--secondary-text);
 }
 
 .differencesHeader .differencesParagraph,
@@ -101,7 +101,7 @@ main button:hover {
    letter-spacing: var(--letter-spacing-paragraph);
    line-height: var(--line-height-paragraph);
    text-transform: uppercase;
-   color: light-dark(var(--primary-dark), var(--off-white));
+   color: var(--primary-dark);
 }
 
 .differencesHeader h3,
@@ -114,7 +114,7 @@ main button:hover {
    font-weight: 700;
    line-height: var(--line-height-subtitle);
    margin-top: 1rem;
-   color:light-dark(var(--primary-dark), var(--off-white));
+   color: var(--primary-dark);
 }
 
 .differencesTopics ul {
@@ -124,7 +124,7 @@ main button:hover {
 
 .differencesListItems .differencesBoxImage {
    padding: 1.2rem;
-   background-color: #0283f4;
+   background-color: var(--blue-destach);
    border-radius: 0.4rem;
 }
 
@@ -293,13 +293,13 @@ main button:hover {
    flex-direction: column;
    gap: 0.5rem;
    padding: 2rem;
-   background-color: light-dark(var(--off-white), var(--primary-dark));
+   background-color: var(--off-white);
    border-radius: 0.5rem;
 }
 
 .metricsCards .card p {
    text-transform: none;
-   color: light-dark(var(--gray-text), var(--off-white));
+   color: var(--gray-text);
 }
 
 @media screen and (max-width: 1600px) {

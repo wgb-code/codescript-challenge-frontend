@@ -1,4 +1,4 @@
-import { navTemplate, openServiceList, openMenuMobile } from '../pages/nav/nav.js';
+import { navTemplate, openServiceList, openMenuMobile, detectedThemeColor, themeColor } from '../pages/nav/nav.js';
 import { cookies, readCookies, getCookies } from '../pages/cookies/cookies.js';
 import { footerTemplate } from '../pages/footer/footer.js';
 
@@ -18,12 +18,16 @@ document.addEventListener('DOMContentLoaded', async function () {
     getViews.forEach( (getViews) => observerInteraction.observe(getViews));
 
     await cookies();
-    navTemplate();
+    await navTemplate();
+    detectedThemeColor();
+    themeColor();
     readCookies();
     footerTemplate();
 
     window.openServiceList = openServiceList;
     window.openMenuMobile = openMenuMobile;
+    window.detectedThemeColor = detectedThemeColor;
+    window.themeColor = themeColor;
     window.getCookies = getCookies;
     window.readCookies = readCookies;
 });

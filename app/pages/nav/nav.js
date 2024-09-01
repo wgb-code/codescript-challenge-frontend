@@ -43,3 +43,36 @@ export function openMenuMobile() {
         menuIcon.src = '/app/assets/svgs/icons/menu.svg';
     }
 }
+
+export function detectedThemeColor() {
+    let getThemeUser = window.matchMedia('(prefers-color-scheme: light)');
+    let getRoot = document.documentElement;
+    let btnTheme = document.getElementById('themeSwitch');
+    let iconTheme = document.getElementById('iconThemeColor');
+
+    if (!getThemeUser.matches) {
+        getRoot.style.setProperty('color-scheme', 'dark');
+        iconTheme.src = '/app/assets/svgs/icons/sun.svg';
+        btnTheme.title = 'Clique para mudar o tema do site para Claro'
+    } else {
+        getRoot.style.setProperty('color-scheme', 'light');
+        iconTheme.src = '/app/assets/svgs/icons/moon.svg';
+        btnTheme.title = 'Clique para mudar o tema do site para Escuro'
+    }
+}
+
+export function themeColor() {
+    let currentScheme = document.documentElement.style.getPropertyValue('color-scheme');
+    let btnTheme = document.getElementById('themeSwitch');
+    let iconTheme = document.getElementById('iconThemeColor');
+
+    if (currentScheme === 'light') {
+        document.documentElement.style.setProperty('color-scheme', 'dark');
+        iconTheme.src = '/app/assets/svgs/icons/sun.svg';
+        btnTheme.title = 'Clique para mudar o tema do site para Claro'
+    } else {
+        document.documentElement.style.setProperty('color-scheme', 'light');
+        iconTheme.src = '/app/assets/svgs/icons/moon.svg';
+        btnTheme.title = 'Clique para mudar o tema do site para Escuro'
+    }
+}

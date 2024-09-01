@@ -21,7 +21,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    background-color: light-dark(var(--background-color), var(--background-color-darkmode));
+    background-color: var(--background-color);
 }
 
 img,
