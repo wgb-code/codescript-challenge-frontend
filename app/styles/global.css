@@ -302,6 +302,10 @@ main button:hover {
    color: var(--gray-text);
 }
 
+#partners {
+   margin-top: 8rem;
+}
+
 @media screen and (max-width: 1600px) {
    .differencesListItems p {
       font-size: 1.6rem;

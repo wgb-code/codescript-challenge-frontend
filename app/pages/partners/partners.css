@@ -1,12 +1,19 @@
 .scroller {
-    max-width: 600px;
+    max-width: 110rem;
 }
 
-.scroller__inner {
+.scrollWrapper {
     padding-block: 1rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5rem;
+}
+
+.scroller img {
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(110%);
 }
 
 .scroller[data-animated="true"] {
@@ -19,7 +26,7 @@
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated="true"] .scrollWrapper {
     width: max-content;
     flex-wrap: nowrap;
     animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;

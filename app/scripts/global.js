@@ -1,4 +1,5 @@
 import { navTemplate, openServiceList, openMenuMobile, detectedThemeColor, themeColor } from '../pages/nav/nav.js';
+import {partnersTemplate, initializeScrollers} from '../pages/partners/partners.js';
 import { cookies, readCookies, getCookies } from '../pages/cookies/cookies.js';
 import { footerTemplate } from '../pages/footer/footer.js';
 
@@ -15,13 +16,15 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const getViews = document.querySelectorAll('.hidden');
 
-    getViews.forEach( (getViews) => observerInteraction.observe(getViews));
+    getViews.forEach((view) => observerInteraction.observe(view));
 
     await cookies();
     await navTemplate();
+    await partnersTemplate();
     detectedThemeColor();
     themeColor();
     readCookies();
+    initializeScrollers();
     footerTemplate();
 
     window.openServiceList = openServiceList;

@@ -24,7 +24,7 @@ export function readCookies() {
 
     if (cookieData) {
         let currentTime = Date.now();
-        let expirationTime = cookieData.timestamp + 24 * 60 * 60 * 1000;
+        let expirationTime = cookieData.timestamp + 5 * 60 * 1000;
 
         if (currentTime > expirationTime) {
             localStorage.removeItem('codescript');
@@ -41,7 +41,6 @@ export function getCookies(action) {
     let cookiesCard = document.querySelector('.cookies-card');
 
     if (action === 'accepted' || action === 'rejected') {
-
         let cookieData = {
             status: action === 'accepted' ? 'Authorized' : 'Not Authorized',
             timestamp: Date.now()
