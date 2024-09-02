@@ -20,20 +20,34 @@ export async function cookies() {
 
 export function readCookies() {
     let cookiesCard = document.querySelector('.cookies-card');
-    let readCookies = localStorage.getItem('codescript');
+    let cookieData = JSON.parse(localStorage.getItem('codescript'));
 
-    readCookies ? cookiesCard.classList.remove('show') : cookiesCard.classList.add('show');
+    if (cookieData) {
+        let currentTime = Date.now();
+        let expirationTime = cookieData.timestamp + 24 * 60 * 60 * 1000;
+
+        if (currentTime > expirationTime) {
+            localStorage.removeItem('codescript');
+            cookiesCard.classList.add('show');
+        } else {
+            cookiesCard.classList.remove('show');
+        }
+    } else {
+        cookiesCard.classList.add('show');
+    }
 }
 
 export function getCookies(action) {
     let cookiesCard = document.querySelector('.cookies-card');
 
-    if (action === 'accepted') {
-        localStorage.codescript = 'Authorized';
-        cookiesCard.classList.remove('show');
+    if (action === 'accepted' || action === 'rejected') {
 
-    } else if (action === 'rejected') {
-        localStorage.codescript = 'Not Authorized';
+        let cookieData = {
+            status: action === 'accepted' ? 'Authorized' : 'Not Authorized',
+            timestamp: Date.now()
+        };
+
+        localStorage.setItem('codescript', JSON.stringify(cookieData));
         cookiesCard.classList.remove('show');
     }
 }
