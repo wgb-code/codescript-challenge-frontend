@@ -50,7 +50,7 @@ export function detectedThemeColor() {
     let btnTheme = document.getElementById('themeSwitch');
     let iconTheme = document.getElementById('iconThemeColor');
 
-    if (!getThemeUser.matches) {
+    if (getThemeUser.matches) {
         getRoot.style.setProperty('color-scheme', 'dark');
         iconTheme.src = '/app/assets/svgs/icons/sun.svg';
         btnTheme.title = 'Clique para mudar o tema do site para Claro'
