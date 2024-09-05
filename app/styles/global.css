@@ -14,7 +14,8 @@ main {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 10rem;
+   padding: 5rem; /* Padronização do padding */
+   margin: 2rem 0; /* Padronização do margin */
    min-height: 100vh;
 }
 
@@ -32,7 +33,6 @@ main {
    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-
 main h1 {
    font-size: 5.6rem;
    font-weight: 700;
@@ -42,7 +42,7 @@ main h1 {
 }
 
 main h1 b,
-.metricsHeader h3 b{
+.metricsHeader h3 b {
    color: var(--blue-destach);
 }
 
@@ -57,7 +57,7 @@ main p {
 
 main button {
    padding: var(--padding-btn);
-   background: linear-gradient(135deg, #0285F4, #52A8F2);;
+   background: linear-gradient(135deg, #0285F4, #52A8F2);
    font-size: var(--fontsize-btn);
    font-weight: 900;
    color: #FFFFFF;
@@ -80,6 +80,8 @@ main button:hover {
    justify-content: center;
    align-items: center;
    background-color: var(--secondary-text);
+   padding: 5rem; /* Padronização do padding */
+   margin: 2rem 0; /* Padronização do margin */
 }
 
 .differencesHeader .differencesParagraph,
@@ -93,7 +95,7 @@ main button:hover {
 
 .differencesHeader .differencesParagraph p,
 .aboutUsHeader .aboutUsParagraph p,
-.ourValuesHeader .ourValuesParagraph,
+.ourValuesHeader .ourValuesParagraph p,
 .metricsHeader .metricsParagraph p,
 .metricsCards .card p {
    font-size: 1.6rem;
@@ -244,7 +246,7 @@ main button:hover {
    margin-top: 4rem;
 }
 
-.aboutUsDetails aside img{
+.aboutUsDetails aside img {
    margin-top: 2rem;
 }
 
@@ -253,7 +255,7 @@ main button:hover {
 }
 
 .aboutUsDetails p {
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    text-align: justify;
 }
 
@@ -279,7 +281,7 @@ main button:hover {
 .metricsContent {
    display: flex;
    justify-content: space-between;
-   gap: 5rem;
+   gap: 10rem;
 }
 
 .metricsContent .metricsCards {
@@ -304,6 +306,85 @@ main button:hover {
 
 #partners {
    margin-top: 8rem;
+}
+
+.recommendations {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 80vw; /* ou ajuste conforme necessário */
+   margin: 0 auto; /* centraliza horizontalmente */
+}
+
+.checkpoint {
+   position: relative;
+   max-width: 34em;
+   padding-top: 2em;
+   padding-bottom: 2em;
+}
+
+.checkpoint div {
+   border: 2px solid #FFFFFF;
+   border-radius: 1em;
+   padding: 1.5em;
+}
+
+.checkpoint p {
+   line-height: 2.7rem;
+   color: #ccc;
+}
+
+.checkpoint:nth-child(odd) {
+   border-left: 3px solid #FFFFFF;
+   padding-left: 3em;
+   transform: translate(17em);
+}
+
+.checkpoint:nth-child(even) {
+   border-right: 3px solid #FFFFFF;
+   padding-right: 3em;
+   transform: translate(-17em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   content: '';
+   background-color: #888;
+   width: 3em;
+   height: 0.3rem;
+}
+
+.checkpoint:nth-child(odd)::before {
+   left: 0;
+}
+
+.checkpoint:nth-child(even)::before {
+   right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+   position: absolute;
+   top: 50%;
+   content: '';
+   background-color: #fff;
+   box-shadow: 0 0 0.5em #0D71FC;
+   width: 0.8em;
+   height: 0.8em;
+   transform: translateY(-50%);
+   border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before {
+   left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before {
+   right: -0.5em;
 }
 
 @media screen and (max-width: 1600px) {
@@ -338,5 +419,33 @@ main button:hover {
    .differencesDetails picture:not(.containerDetails li picture) {
       max-width: 50.2rem;
       max-height: 49.2rem;
+   }
+}
+
+@media screen and (max-width: 1150px) {
+   .recommendations {
+      width: 80vw;
+   }
+
+   .checkpoint {
+      width: 100%;
+      transform: none;
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+   }
+
+   .checkpoint::before {
+      width: 0.3rem;
+      height: 4em;
+      top: -2em;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .checkpoint div::before {
+      top: -0.5em;
+      left: 50%;
+      transform: translateX(-50%)
    }
 }
