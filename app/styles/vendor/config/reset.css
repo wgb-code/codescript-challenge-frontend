@@ -1,6 +1,5 @@
 :root {
-    --spacing: 1rem;
-    --container-padding: 5%;
+    color-scheme: light dark;
 }
 
 * {
