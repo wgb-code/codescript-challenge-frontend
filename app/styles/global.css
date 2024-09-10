@@ -321,14 +321,6 @@ main button:hover {
    border: 0.2rem solid var(--blue-destach);
    color: var(--blue-destach);
    letter-spacing: 0.1rem;
-   transition: background 0.3s;
-   cursor: pointer;
-}
-
-.metricsButton:hover {
-   color: var(--primary-dark);
-   border: none;
-   background: linear-gradient(135deg, #0063C0, #0285F4);
 }
 
 #partners {
@@ -395,5 +387,15 @@ main button:hover {
       top: -0.5em;
       left: 50%;
       transform: translateX(-50%)
+   }
+}
+
+@keyframes slide-up {
+   0% {
+      transform: translateY(0.1rem);
+   }
+
+   100% {
+      transform: translateY(0rem);
    }
 }
