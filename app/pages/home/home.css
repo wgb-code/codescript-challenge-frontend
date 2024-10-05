@@ -1,5 +1,16 @@
 @import url('/app/styles/vendor/colors.css');
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+}
+
 .homeMain {
     display: flex;
     justify-content: center;
@@ -48,12 +59,17 @@
     color: var(--whitePrimary);
 }
 
-.homeMain .welcome p {
+.homeMain .welcome p,
+.started .startedDescription p {
     font-size: clamp(2rem, 2vw + 1rem, 1.8rem);
     font-weight: 400;
 
     line-height: clamp(2.4rem, 3vw + 1rem, 2.8rem);
     color: var(--grayPrimary);
+}
+
+.started .startedDescription p  {
+    color: var(--bluePrimary);
 }
 
 .homeMain .welcome button {
@@ -72,7 +88,8 @@
 }
 
 .services,
-.values {
+.values,
+.started {
     padding: clamp(4rem, 6vw, 8rem) clamp(5rem, 8vw, 11.2rem);
     display: flex;
     flex-direction: column;
@@ -81,7 +98,8 @@
 }
 
 .services .servicesDescription,
-.values .valuesDescription {
+.values .valuesDescription,
+.started .startedDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +136,8 @@
 }
 
 .services .servicesDescription h2,
-.values .valuesDescription h3 {
+.values .valuesDescription h3,
+.started .startedDescription h3{
     font-size: clamp(2.8rem, 4vw + 1rem, 3.6rem);
     font-weight: 600;
     text-align: center;
@@ -177,10 +196,86 @@
 }
 
 .values {
-    background-color: var(--darkPrimary);
+    position: relative;
+    z-index: 2;
+
+    background-image: url("/app/assets/imgs/ilustrations/homens-sorrindo.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    min-block-size: 60vh;
+    place-content: center;
+}
+
+.values::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(
+        hsla(220, 80%, 19%, 0.9),
+        hsl(220 80% 10% / 0.8)
+    );
+    z-index: -1;
 }
 
 .values .valuesContent {
     display: flex;
-    border: 5px solid white;
+    flex-direction: column;
+    padding: 6.9rem 0;
+    gap: 6rem;
+}
+
+.values .valuesContent ul {
+    display: flex;
+    gap: 5rem;
+}
+
+.values .valuesContent ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 0.1rem solid var(--graySecondary);
+    border-radius: 1.2rem;
+    padding: 1.5rem 3rem;
+}
+
+.values .valuesContent ul li picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(0.6rem, 1vw, 0.8rem);
+    background-color: var(--shadowIcons);
+    border-radius: clamp(0.8rem, 1.5vw, 1.2rem);
+    margin-bottom: 2rem;
+}
+
+
+.values .valuesContent ul li h2 {
+    font-size: clamp(2.4rem, 3.5vw, 3rem);
+    line-height: clamp(2.4rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    color: var(--whitePrimary);
+    margin-bottom: 2rem;
+}
+
+.values .valuesContent ul li p {
+    width: 100%;
+    max-width: 50rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    line-height: 1.6em;
+    color: var(--graySecondary);
+}
+
+.started .videoDescription {
+    margin-top: 4rem;
+
+    position: relative;
+    z-index: 1100;
+}
+
+.started video {
+    border-radius: 1.2rem;
+    cursor: pointer;
 }
