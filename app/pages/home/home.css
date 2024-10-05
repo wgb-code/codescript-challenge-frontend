@@ -1,0 +1,186 @@
+@import url('/app/styles/vendor/colors.css');
+
+.homeMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    background-image: url("/app/assets/imgs/ilustrations/codescript.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    min-block-size: 100vh;
+    place-content: center;
+
+    padding: 6.4rem 11.2rem;
+}
+
+.homeMain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(
+        hsl(220 80% 20% / 0.9),
+        hsl(220 80% 10% / 0.8)
+    );
+    z-index: -1;
+}
+
+.homeMain .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.homeMain .welcome h1 {
+    font-size: clamp(5rem, 5vw + 1rem, 4.8rem);
+    font-weight: 600;
+
+    line-height: clamp(4.5rem, 5vw + 1rem, 6rem);
+    color: var(--whitePrimary);
+}
+
+.homeMain .welcome p {
+    font-size: clamp(2rem, 2vw + 1rem, 1.8rem);
+    font-weight: 400;
+
+    line-height: clamp(2.4rem, 3vw + 1rem, 2.8rem);
+    color: var(--grayPrimary);
+}
+
+.homeMain .welcome button {
+    font-size: clamp(1.2rem, 1.5vw + 0.5rem, 1.4rem);
+    font-weight: 500;
+
+    line-height: clamp(1.8rem, 2vw + 0.5rem, 2rem);
+    letter-spacing: 0.16rem;
+
+    border-radius: 0.8rem;
+    padding: clamp(0.8rem, 1vw + 0.5rem, 1rem) clamp(1.6rem, 2vw + 0.5rem, 2rem);
+
+    background-color: transparent;
+    border: var(--whitePrimary) 0.1rem solid;
+    color: var(--whitePrimary);
+}
+
+.services,
+.values {
+    padding: clamp(4rem, 6vw, 8rem) clamp(5rem, 8vw, 11.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--grayPrimary);
+}
+
+.services .servicesDescription,
+.values .valuesDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+.services .servicesDescription .badge,
+.values .valuesDescription .badge {
+    width: clamp(10rem, 12vw, 13rem);
+    padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.8rem, 1.5vw, 1rem);
+    background-color: transparent;
+    border-radius: clamp(1rem, 2vw, 1.5rem);
+    border: 0.2rem solid var(--bluePrimary);
+    text-align: center;
+}
+
+.values .valuesDescription .badge {
+    border: 0.2rem solid var(--whitePrimary);
+}
+
+.services .servicesDescription .badge p,
+.values .valuesDescription .badge p {
+    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    font-weight: 500;
+}
+
+.services .servicesDescription .badge p {
+    color: var(--bluePrimary);
+}
+
+.values .valuesDescription .badge p {
+    color: var(--whitePrimary);
+}
+
+.services .servicesDescription h2,
+.values .valuesDescription h3 {
+    font-size: clamp(2.8rem, 4vw + 1rem, 3.6rem);
+    font-weight: 600;
+    text-align: center;
+    line-height: clamp(3.4rem, 5vw + 1rem, 4.4rem);
+}
+
+.values .valuesDescription h3 {
+    color: var(--whitePrimary);
+}
+
+.services ul {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6rem, 10vw, 10rem);
+    padding-top: clamp(4rem, 6vw, 6.4rem);
+}
+
+.services ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.services .detailsService {
+    display: flex;
+    flex-direction: column;
+}
+
+.services .detailsService h2 {
+    font-size: clamp(2.4rem, 3.5vw, 3rem);
+    line-height: clamp(2.4rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    color: var(--bluePrimary);
+    margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.services .detailsService p {
+    width: 100%;
+    max-width: 80rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    line-height: 1.6em;
+    text-align: left;
+    margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.services .detailsService button {
+    border: 0.2rem solid var(--bluePrimary);
+    background-color: transparent;
+    padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 3rem);
+    border-radius: clamp(0.6rem, 1vw, 0.8rem);
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    color: var(--bluePrimary);
+}
+
+.values {
+    background-color: var(--darkPrimary);
+}
+
+.values .valuesContent {
+    display: flex;
+    border: 5px solid white;
+}
