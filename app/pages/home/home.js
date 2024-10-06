@@ -1,5 +1,6 @@
 import { videoConfig } from "../../services/videoHandler.js"
 import { toggleListBody } from "../../services/toggleListBody.js";
+import { scrollReveal } from "../../services/scrollReveal.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     videoConfig('videoPlayer', 'overlay')
@@ -11,4 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleListBody(button);
       });
     });
+
+    scrollReveal();
 });
