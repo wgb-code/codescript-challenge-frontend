@@ -35,10 +35,8 @@
     position: absolute;
     inset: 0;
 
-    background-image: linear-gradient(
-        hsl(220 80% 20% / 0.9),
-        hsl(220 80% 10% / 0.8)
-    );
+    background-image: linear-gradient(hsl(220 80% 20% / 0.9),
+            hsl(220 80% 10% / 0.8));
     z-index: -1;
 }
 
@@ -60,7 +58,8 @@
 }
 
 .homeMain .welcome p,
-.started .startedDescription p {
+.started .startedDescription p,
+.asking .askingDescription p {
     font-size: clamp(2rem, 2vw + 1rem, 1.8rem);
     font-weight: 400;
 
@@ -70,6 +69,11 @@
 
 .started .startedDescription p {
     color: var(--bluePrimary);
+}
+
+.asking .askingDescription p {
+    text-align: center;
+    color: var(--graySecondary);
 }
 
 .homeMain .welcome button {
@@ -99,7 +103,8 @@
 
 .services .servicesDescription,
 .values .valuesDescription,
-.started .startedDescription {
+.started .startedDescription,
+.asking .askingDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,14 +142,16 @@
 
 .services .servicesDescription h2,
 .values .valuesDescription h3,
-.started .startedDescription h3 {
+.started .startedDescription h3,
+.asking .askingDescription h3 {
     font-size: clamp(2.8rem, 4vw + 1rem, 3.6rem);
     font-weight: 600;
     text-align: center;
     line-height: clamp(3.4rem, 5vw + 1rem, 4.4rem);
 }
 
-.values .valuesDescription h3 {
+.values .valuesDescription h3,
+.asking .askingDescription h3 {
     color: var(--whitePrimary);
 }
 
@@ -208,15 +215,36 @@
     place-content: center;
 }
 
+.asking {
+    position: relative;
+    z-index: 2;
+    background-image: url("/app/assets/imgs/ilustrations/caneca-codescript.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    padding: clamp(4rem, 6vw, 8rem) clamp(5rem, 8vw, 11.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.asking::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(hsla(220, 80%, 19%, 0.9),
+            hsl(220 80% 10% / 0.8));
+    z-index: -1;
+}
+
 .values::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background-image: linear-gradient(
-        hsla(220, 80%, 19%, 0.9),
-        hsl(220 80% 10% / 0.8)
-    );
+    background-image: linear-gradient(hsla(220, 80%, 19%, 0.9),
+            hsl(220 80% 10% / 0.8));
     z-index: -1;
 }
 
@@ -276,5 +304,107 @@
 
 .started video {
     border-radius: clamp(1rem, 1.5vw, 1.2rem);
+    cursor: pointer;
+}
+
+.asking ul {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 80rem;
+    margin: 6.4rem 0;
+    gap: 1.6rem;
+}
+
+.asking ul li {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid var(--graySecondary);
+    border-radius: 0.8rem;
+    padding: 3.2rem;
+}
+
+.asking ul li .listHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.asking ul li .listHeader h4,
+.asking .persistentDoubts h4 {
+    font-size: clamp(2rem, 2vw + 1rem, 1.8rem);
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    line-height: clamp(2.4rem, 3vw + 1rem, 2.8rem);
+    color: var(--grayPrimary);
+}
+
+.asking ul li .listBody p,
+.asking .persistentDoubts p {
+    font-size: 1.6rem;
+    letter-spacing: 0.02rem;
+    line-height: clamp(2.4rem, 3vw + 1rem, 2.8rem);
+    text-align: left;
+    margin-top: 2rem;
+    color: var(--graySecondary);
+}
+
+.asking ul li .listBody {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.asking ul li .listBody.open {
+    max-height: 100rem;
+    transition: max-height 0.5s ease-out, overflow 0s linear 0.5s;
+}
+
+.asking ul li .listHeader button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.asking .persistentDoubts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.2rem;
+    border-radius: 2rem;
+    background-color: var(--shadowIcons);
+}
+
+.asking .persistentDoubts h4 {
+    margin-bottom: 1rem;
+}
+
+.asking .persistentDoubts p {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    width: 100%;
+    max-width: 46.3rem;
+}
+
+.asking .persistentDoubts .persistentDoubtsBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--whitePrimary);
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.asking .persistentDoubts .persistentDoubtsBtn span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--whitePrimary);
+
     cursor: pointer;
 }
