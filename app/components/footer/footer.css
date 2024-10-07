@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    align-items: center;
+    padding: 2rem clamp(5rem, 8vw, 11.2rem);
+}
+
+footer .generalInfos {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+}
+
+footer .generalInfos img {
+    width: 30rem;
+    height: auto;
+    margin-bottom: 2.4rem;
+}
+
+footer .generalInfos p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+footer .generalInfos .generalListIcons {
+    display: flex;
+    align-items: center;
+    margin-top: 3.2rem;
+    gap: 1.2rem;
+}
+
+footer .generalInfos .generalListIcons a {
+    text-align: center;
+}
+
+footer .generalInfos .generalListIcons a img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0;
+}

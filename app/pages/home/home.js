@@ -1,17 +1,25 @@
+import { navbarTemplate } from "../../components/nav/nav.js";
+import { footerTemplate } from "../../components/footer/footer.js";
+
 import { videoConfig } from "../../services/videoHandler.js"
 import { toggleListBody } from "../../services/toggleListBody.js";
 import { scrollReveal } from "../../services/scrollReveal.js";
+import { scrollPartners } from "../../services/scrollPartners.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     videoConfig('videoPlayer', 'overlay')
 
-    const buttons = document.querySelectorAll('.listHeader button');
+    let buttons = document.querySelectorAll('.listHeader button')
 
-    buttons.forEach(button => {
+    buttons.forEach( button => {
       button.addEventListener('click', () => {
-        toggleListBody(button);
+        toggleListBody(button)
       });
     });
 
-    scrollReveal();
+    navbarTemplate()
+    footerTemplate()
+
+    scrollReveal()
+    scrollPartners()
 });

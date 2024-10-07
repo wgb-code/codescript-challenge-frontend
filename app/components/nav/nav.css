@@ -1,1 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: var(--whitePrimary);
+    padding: 2rem 0;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+nav img {
+    width: 20rem;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.8rem;
+    color: var(--darkPrimary);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--shadowIcons);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--darkPrimary);
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle.open {
+    transform: rotate(90deg);
+    color: var(--whitePrimary);
+}
+
+@media (max-width: 860px) {
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        padding: 10rem 2rem;
+        box-shadow: -0.5rem 0 0.8rem rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 3rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1050;
+    }
+
+    nav ul li a {
+        color: var(--whitePrimary);
+    }
+
+    nav ul li a:hover {
+        color: var(--darkPrimary);
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+        display: flex;
+        background-color: var(--darkPrimary);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.scrolled-nav {
+    background-color: var(--darkPrimary);
+}
