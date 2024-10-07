@@ -53,7 +53,7 @@
     font-size: clamp(5rem, 5vw + 1rem, 4.8rem);
     font-weight: 600;
 
-    line-height: clamp(4.5rem, 5vw + 1rem, 6rem);
+    line-height: 6rem;
     color: var(--whitePrimary);
 }
 
@@ -167,6 +167,11 @@
     align-items: center;
     justify-content: center;
     gap: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.services ul li img {
+    width: 25rem;
+    height: auto;
 }
 
 .services .detailsService {
@@ -407,4 +412,22 @@
     color: var(--whitePrimary);
 
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1050px) {
+    .values .valuesContent ul {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .services ul li {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .services ul li img {
+        width: 15rem;
+        height: auto;
+    }
 }
