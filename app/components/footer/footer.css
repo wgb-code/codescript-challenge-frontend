@@ -1,17 +1,26 @@
 footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 2rem clamp(5rem, 8vw, 11.2rem);
+    justify-content: space-between;
+    padding: 2.4rem clamp(5rem, 8vw, 11.2rem);
+    background-color: var(--darkPrimary);
+}
+
+footer .generalInfos,
+footer .routerInfos,
+footer .addressInfos {
+    flex: 1;
+    margin-bottom: 3.2rem;
 }
 
 footer .generalInfos {
     display: flex;
     flex-direction: column;
-    border: 5px solid black;
 }
 
 footer .generalInfos img {
-    width: 30rem;
+    width: 20rem;
     height: auto;
     margin-bottom: 2.4rem;
 }
@@ -19,6 +28,7 @@ footer .generalInfos img {
 footer .generalInfos p {
     font-size: 1.6rem;
     line-height: 2.4rem;
+    color: var(--whitePrimary);
 }
 
 footer .generalInfos .generalListIcons {
@@ -36,4 +46,108 @@ footer .generalInfos .generalListIcons a img {
     width: 2.4rem;
     height: 2.4rem;
     margin: 0;
+}
+
+footer .routerInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+footer .routerInfos h4,
+footer .addressInfos ul li h4  {
+    color: var(--whitePrimary);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+footer .routerInfos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+footer .routerInfos ul li a {
+    color: var(--graySecondary);
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+footer .routerInfos ul li a:hover {
+    background-color: var(--shadowIcons);
+}
+
+footer .addressInfos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+footer .addressInfos ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .addressInfos ul li p {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    color: var(--graySecondary);
+}
+
+footer .addressInfos ul li span {
+    margin-top: 0.6rem;
+    font-size: 1.6rem;
+    color: var(--graySecondary);
+}
+
+/* Estilos para telas menores */
+@media (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.4rem;
+    }
+
+    footer .generalInfos img {
+        width: 16rem;
+    }
+
+    footer .generalInfos .generalListIcons {
+        justify-content: flex-start;
+    }
+
+    footer .routerInfos ul {
+        gap: 1.2rem;
+    }
+}
+
+/* Estilos para telas muito pequenas (celulares) */
+@media (max-width: 768px) {
+    footer {
+        padding: 2.4rem;
+    }
+
+    footer .generalInfos img {
+        width: 15rem;
+    }
+
+    footer .generalInfos p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    footer .routerInfos h4,
+    footer .addressInfos ul li h4  {
+        font-size: 1.8rem;
+    }
+
+    footer .routerInfos ul li a {
+        font-size: 1.4rem;
+    }
+
+    footer .addressInfos ul li p,
+    footer .addressInfos ul li span {
+        font-size: 1.4rem;
+    }
 }
