@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="contact">
+
+    <link rel="shortcut icon" href="/app/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/app/styles/vendor/effects.css">
+    <link rel="stylesheet" href="/app/styles/vendor/reset.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <title>Contatos</title>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main>
+        <article class="descriptionContact">
+            <h1>Contate-nos</h1>
+            <p>Será um prazer conversar com você.</p>
+
+            <div class="generalListIcons">
+                <a href="https://api.whatsapp.com/send?phone=5554999660470" target="_blank">
+                    <img src="/app/assets/svgs/icons/whatsapp.svg" alt="Ícone WhatsApp" loading="lazy" width="16" height="16">
+                </a>
+                <a href="https://www.instagram.com/codescript.tech/" target="_blank">
+                    <img src="/app/assets/svgs/icons/instagram.svg" alt="Ícone Instagram" loading="lazy" width="16" height="16">
+                </a>
+                <a href="https://www.linkedin.com/company/codescript-tech/" target="_blank">
+                    <img src="/app/assets/svgs/icons/linkedin.svg" alt="Ícone LinkedIn" loading="lazy" width="16" height="16">
+                </a>
+                <a href="https://www.youtube.com/@code.script" target="_blank">
+                    <img src="/app/assets/svgs/icons/youtube.svg" alt="Ícone YouTube" loading="lazy" width="16" height="16">
+                </a>
+            </div>
+        </article>
+
+        <article class="formContact">
+            <form>
+                <div class="flexForm">
+                    <article class="nameForm">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Nome*" required>
+                    </article>
+
+                    <article class="phoneForm">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Telefone">
+                    </article>
+                </div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="g-recaptcha" data-sitekey="6Ld_xywqAAAAAHnLrd2J0yIGO5IV6Rh6Rm1311wp"></div>
+
+                <button type="submit" id="submit-button">Enviar</button>
+            </form>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+
+    <div id="toast" class="hidden">
+        <p id="toast-message"></p>
+    </div>
+
+    <script type="module" src="contact.js"></script>
+</body>
+</html>

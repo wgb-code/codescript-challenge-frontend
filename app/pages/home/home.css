@@ -569,3 +569,7 @@
     animation: fade-in 350ms cubic-bezier(0, 0, 0.2, 1) slide-to-left 350ms cubic-bezier(0, 0, 0.2, 1);
     mix-blend-mode: normal;
 }
+
+.card-transition-large {
+    view-transition-name: card;
+}
