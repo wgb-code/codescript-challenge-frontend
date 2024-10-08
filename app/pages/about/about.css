@@ -11,12 +11,12 @@
     position: relative;
     z-index: 2;
 
-    background-image: url("/app/assets/imgs/ilustrations/code-bg-banner.webp");
+    background-image: url("/app/assets/imgs/ilustrations/caneca-codescript.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center center;
 
-    min-block-size: 70vh;
+    min-block-size: calc(100vh - 9.2rem);
     place-content: center;
 
     padding: clamp(5rem, 8vw, 6.4rem) clamp(10rem, 15vw, 11.2rem);
@@ -118,7 +118,7 @@
 }
 
 .techLogos img {
-    width: clamp(6rem, 7vw, 8rem);
+    width: 4.5rem;
     height: auto;
 }
 
