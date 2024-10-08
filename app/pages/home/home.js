@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach( button => {
       button.addEventListener('click', () => {
         toggleListBody(button)
-      });
-    });
+      })
+    })
 
     navbarTemplate()
     footerTemplate()
 
     scrollReveal()
     scrollPartners()
-});
+})

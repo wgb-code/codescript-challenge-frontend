@@ -1,0 +1,134 @@
+@import url('/app/styles/vendor/colors.css');
+@import url('/app/components/nav/nav.css');
+@import url('/app/components/footer/footer.css');
+
+.aboutMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    background-image: url("/app/assets/imgs/ilustrations/code-bg-banner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    min-block-size: 70vh;
+    place-content: center;
+
+    padding: clamp(5rem, 8vw, 6.4rem) clamp(10rem, 15vw, 11.2rem);
+}
+
+.aboutMain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(hsla(220, 66%, 16%, 0.9),
+            hsla(221, 85%, 8%, 0.8));
+    z-index: -1;
+}
+
+.aboutMain h1 {
+    text-align: center;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    color: var(--whitePrimary);
+}
+
+.aboutMain p {
+    margin-top: 2.4rem;
+    line-height: clamp(2rem, 2.5vw, 2.6rem);
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    letter-spacing: 0.1rem;
+    color: var(--graySecondary);
+}
+
+.aboutContent {
+    padding: clamp(4rem, 6vw, 8rem) clamp(5rem, 8vw, 11.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    background-color: var(--grayPrimary);
+}
+
+.aboutContent p {
+    text-align: justify;
+    width: 100%;
+    max-width: 80rem;
+
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    letter-spacing: 0.1rem;
+    line-height: clamp(2.4rem, 3vw, 3rem);
+}
+
+.aboutContent hr {
+    margin: 0;
+    width: 10rem;
+    border: 0.2rem solid var(--bluePrimary);
+}
+
+.aboutContent h2 {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    font-weight: 500;
+    color: var(--bluePrimary);
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    background-image: url("/app/assets/imgs/ilustrations/caneca-codescript.webp");
+    background-size: cover;
+    background-position: center center;
+
+    min-block-size: 100vh;
+    place-content: center;
+
+    padding: clamp(5rem, 8vw, 6.4rem) clamp(10rem, 15vw, 11.2rem);
+}
+
+.contactUs::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(hsl(220 80% 20% / 0.9),
+            hsl(220 80% 10% / 0.8));
+    z-index: -1;
+}
+
+.techLogos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.techLogos img {
+    width: clamp(6rem, 7vw, 8rem);
+    height: auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .techLogos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .techLogos img {
+        width: 5rem;
+    }
+}

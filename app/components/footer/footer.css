@@ -1,17 +1,10 @@
 footer {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 5rem;
     padding: 2.4rem clamp(5rem, 8vw, 11.2rem);
     background-color: var(--darkPrimary);
-}
-
-footer .generalInfos,
-footer .routerInfos,
-footer .addressInfos {
-    flex: 1;
-    margin-bottom: 3.2rem;
 }
 
 footer .generalInfos {
@@ -101,16 +94,11 @@ footer .addressInfos ul li span {
     color: var(--graySecondary);
 }
 
-/* Estilos para telas menores */
 @media (max-width: 1024px) {
     footer {
         flex-direction: column;
         align-items: flex-start;
         padding: 2.4rem;
-    }
-
-    footer .generalInfos img {
-        width: 16rem;
     }
 
     footer .generalInfos .generalListIcons {
@@ -122,14 +110,9 @@ footer .addressInfos ul li span {
     }
 }
 
-/* Estilos para telas muito pequenas (celulares) */
 @media (max-width: 768px) {
     footer {
         padding: 2.4rem;
-    }
-
-    footer .generalInfos img {
-        width: 15rem;
     }
 
     footer .generalInfos p {
