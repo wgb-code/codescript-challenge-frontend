@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-position: center center;
 
-    min-block-size: calc(100vh - 9.2rem);
+    min-block-size: calc(60vh - 9.2rem);
     place-content: center;
 
     padding: clamp(5rem, 8vw, 6.4rem) clamp(10rem, 15vw, 11.2rem);
